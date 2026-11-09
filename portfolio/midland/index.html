@@ -5,122 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Midland State Bank Color System Overhaul — Olga Tochilin</title>
 <meta name="description" content="Midland State Bank Color System Overhaul">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="../../assets/fonts/HostGrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="../../">Olga Tochilin</a>
-  <nav>
-    <a href="../../#work">Work</a>
-    <a href="../../#experience">Experience</a>
-    <a href="../../assets/Olga-Tochilin-PD.pdf" target="_blank" rel="noopener">Résumé</a>
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href="../../"><span class="mono">OT</span><span class="brand-name">Olga Tochilin</span></a>
+    <nav>
+      <a href="../../#work">Work</a>
+      <a href="../../#experience">Experience</a>
+      <a class="nav-cta" href="../../assets/Olga-Tochilin-PD.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg>Résumé</a>
+    </nav>
+  </div>
 </header>
-<main class="project">
+<main class="project" id="top">
 <article class="wrap narrow">
-  <p class="back"><a href="../../#work">← All work</a></p>
-  <h1>Midland State Bank Color System Overhaul</h1>
-  <dl class="meta"><dt>Client</dt><dd>Midland State Bank</dd><dt>My role</dt><dd>Lead Designer</dd></dl>
-  <h3 class="h">Overview</h3>
-<p>In this case study, I share my experience as part of a larger design system team working to refine the design system for Midland State Bank. My main focus within the team was enhancing the color system.</p>
-<p>The goal was to create a color system that supported theming, including a high-contrast theme for accessibility, and established a clear and consistent color approach that unified the bank’s products and marketing materials.</p>
-<p>Once I finalized the new system, I updated the documentation and developed a semantic color palette—a systematic approach that defines the constraints for color generation rather than relying on static swatches.</p>
-<p>The process concluded with implementing color updates in Midland State Bank’s design and engineering resources and documentation.</p>
-<figure><img src="../../assets/img/midland-overview.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Background</h3>
-<p>Midland States Bank is a community-focused financial institution offering a range of services, including personal and business banking, loans, and wealth management.</p>
-<p>They have many tools and software, including web applications, mobile apps for consumers and businesses, and internal tools.</p>
-<p>Over time, different design and engineering teams worked on these products without a clear and consistent design system. This led to a lot of inconsistencies and messy code. To fix this, Midland State Bank decided to improve their products by creating a design system.</p>
-<p>I was part of the team working on this project, focusing specifically on improving the color system.</p>
-<h3 class="h">Brand colors</h3>
-<p>It’s worth noting that I didn’t start from scratch. Midland State Bank already had a brand guideline mainly for marketing purposes, and I was given a set of colors from the marketing department.</p>
-<figure><img src="../../assets/img/colors-brand-colors-2-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h2 class="section">Problem</h2>
-<h3 class="h">Chaos in color structure and naming convention</h3>
-<p>First, I wanted to understand what they already had in place. So, I asked my engineers to look into the code and give me a clear answer: is there an existing system or even part of a system that I can rely on or use as a starting point?</p>
-<p>When they examined the codebase, they found an unstructured and chaotic approach to color usage. Over time, engineers had added numerous colors without consistent logic or structure.</p>
-<p>Some colors were named by their usage for example “Modal Overlay”, or “border”, some of them were more abstract: examples are “Primary” or Warning and ultimately, some colors were named just randomly: for example “Neutral 1”, “Neutrlal 2”, “ADA”, or “Inverse darkest”.</p>
-<p>This made it challenging to understand the logic behind these colors and how to apply them effectively to the UI.</p>
-<figure><img src="../../assets/img/colors-chaotic-names-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Poor dark mode support</h3>
-<p>Another significant issue I identified was the poor support for dark mode. The existing implementation was a simple color inversion, which often led to unintended and visually unappealing results.</p>
-<p>This approach disregarded the nuances of proper dark mode design, where colors need to be carefully adjusted to maintain readability, contrast, and visual hierarchy.</p>
-<figure><img src="../../assets/img/colors-poor-dark-mode-support-3.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Accessibility</h3>
-<p>And finally, an accessibility issue was identified: the primary brand colors did not meet accessibility standards when paired with white text, which was widely used throughout the product.</p>
-<figure><img src="../../assets/img/colors-problem-accessibility-2-1-2048x630-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Problem outline</h3>
-<h4 class="sub">Chaos in the color variables</h4>
-<p>There was no logic or structure, and over time, multiple developers had contributed to the codebase, leading to a total breakdown in the color naming conventions.</p>
-<h4 class="sub">Poor dark mode support</h4>
-<p>The existing implementation was a simple color inversion, which led to unintended and visually unappealing results.</p>
-<h4 class="sub">Inaccessible brand colors</h4>
-<p>The primary brand colors did not meet accessibility standards when paired with white text, which was widely used throughout the product.</p>
-<h3 class="h">Solution</h3>
-<p>To create a more robust and functional color system, I began by introducing Static and Semantic color variables.</p>
-<figure><img src="../../assets/img/colors-solution-3-2048x910-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Static Colors</h3>
-<p>Static colors are the basic colors that form company’s brand. Designers rely on them everywhere: to build the UI, Illustrations, complex charts, banners and ads, and literally anything in MSB products.</p>
-<p>These values are static and not themable. They have no meaning, and their names are representing their values (the hues). Green is green and red is red. It’s hard to misunderstood the value of these colors.</p>
-<p>I expanded the color palette to include more static colors that support a wider range of use cases beyond basic branding. These new colors addressed essential needs such as interactive component states, including hover, pressed, and disabled states, as well as positive feedback messages, error indicators, and warnings.</p>
-<figure><img src="../../assets/img/colors-static-colors-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Semantic Colors</h3>
-<p>On top of that, I introduced semantic color variables. Semantic color variables are an additional layer between static colors and the UI. They are defined based on the role they play in the interface.</p>
-<figure><img src="../../assets/img/colors-semantic-colors-2.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Naming convention</h3>
-<p>To help designers and engineers understand the logic behind semantic color tokens, I divided the token names into clear categories.</p>
-<p>I used generic names for the color tokens, which means that color names don’t rely on our component inventory. So designers can build their custom components using the same color tokens, and they will still automatically support theming.</p>
-<figure><img src="../../assets/img/colors-naming-convention-2.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Examples</h3>
-<p>Here are a few examples of how these tokens can be applied to the UI.</p>
-<figure><img src="../../assets/img/colors-example-3.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<figure><img src="../../assets/img/colors-example-5-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Testing the Color System</h3>
-<p>To ensure the new semantic color system was intuitive, I ran a fun testing exercise called Guess the Color. Designers and engineers reviewed UI elements and identified their semantic colors, helping us assess how well the system communicated its purpose.</p>
-<p>With an 85% success rate, the exercise validated the system’s clarity and aligned the team on its usage.</p>
-<figure><img src="../../assets/img/colors-testing-2.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Dark Mode</h3>
-<p>I implemented separate light and dark mode color palettes to enhance user experience and accessibility. For dark mode, I intentionally desaturated the colors by default to prioritize improved readability in low-light environments.</p>
-<figure><img src="../../assets/img/colors-dark-mode-4.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Data Visualisation Colors</h3>
-<p>In addition to semantic color tokens, I included a specific set of tokens designed for data representation, such as charts, graphs, and other forms of data visualization. These tokens are essentially a collection of miscellaneous colors. They serve as a palette of distinct colors without any underlying logical meaning tied to context or function.</p>
-<p>These tokens are themable, allowing them to adapt to different design requirements or themes, but their primary purpose is to provide visual differentiation in data presentation, ensuring clarity and accessibility in visualizations.</p>
-<figure><img src="../../assets/img/colors-data-visualisation.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h3 class="h">Documentation</h3>
-<p>Establishing a logical system with semantic colors is important, but equally critical is creating thorough documentation with clear examples to ensure proper understanding and consistent application.</p>
-<p>I created comprehensive documentation for the design system using zeroheight, ensuring all details, including the semantic color system, are easily accessible to everyone internally.</p>
-<figure><img src="../../assets/img/colors-documentation.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<h2 class="section">Results</h2>
-<h3 class="h">Key takeaways</h3>
-<p>My work resulted in significant improvements to the color system:</p>
-<ul><li>Semantic color variables. I established semantic color variables for clear, consistent use across the products.</li><li>Documentation. Provided comprehensive documentation to guide designers and engineers on how to apply these variables effectively.</li><li>Theming and Dark Mode Support. Built a strong foundation to support dark mode and future theming.</li><li>Accessibility. Enhanced the main brand color to ensure better accessibility and compliance with contrast standards.</li></ul>
-<figure><img src="../../assets/img/colors-results-4-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<figure><img src="../../assets/img/colors-results-demo-7-1024x586.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<figure><img src="../../assets/img/colors-results-demo-8-1024x586.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<figure><img src="../../assets/img/colors-results-demo-9-1024x586.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
-<p class="thanks">Thank you for scrolling all the way!</p>
+  <p class="back" data-reveal><a href="../../#work">← All work</a></p>
+  <p class="kicker" data-reveal>Design Systems</p>
+  <h1 data-reveal>Midland State Bank Color System Overhaul</h1>
+  <dl class="meta" data-reveal><div><dt>Client</dt><dd>Midland State Bank</dd></div><div><dt>My role</dt><dd>Lead Designer</dd></div></dl>
+  <h3 class="h" data-reveal>Overview</h3>
+<p data-reveal>In this case study, I share my experience as part of a larger design system team working to refine the design system for Midland State Bank. My main focus within the team was enhancing the color system.</p>
+<p data-reveal>The goal was to create a color system that supported theming, including a high-contrast theme for accessibility, and established a clear and consistent color approach that unified the bank’s products and marketing materials.</p>
+<p data-reveal>Once I finalized the new system, I updated the documentation and developed a semantic color palette—a systematic approach that defines the constraints for color generation rather than relying on static swatches.</p>
+<p data-reveal>The process concluded with implementing color updates in Midland State Bank’s design and engineering resources and documentation.</p>
+<figure data-reveal><img src="../../assets/img/midland-overview.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Background</h3>
+<p data-reveal>Midland States Bank is a community-focused financial institution offering a range of services, including personal and business banking, loans, and wealth management.</p>
+<p data-reveal>They have many tools and software, including web applications, mobile apps for consumers and businesses, and internal tools.</p>
+<p data-reveal>Over time, different design and engineering teams worked on these products without a clear and consistent design system. This led to a lot of inconsistencies and messy code. To fix this, Midland State Bank decided to improve their products by creating a design system.</p>
+<p data-reveal>I was part of the team working on this project, focusing specifically on improving the color system.</p>
+<h3 class="h" data-reveal>Brand colors</h3>
+<p data-reveal>It’s worth noting that I didn’t start from scratch. Midland State Bank already had a brand guideline mainly for marketing purposes, and I was given a set of colors from the marketing department.</p>
+<figure data-reveal><img src="../../assets/img/colors-brand-colors-2-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h2 class="section-head" data-reveal><span>Problem</span><i></i><b>01</b></h2>
+<h3 class="h" data-reveal>Chaos in color structure and naming convention</h3>
+<p data-reveal>First, I wanted to understand what they already had in place. So, I asked my engineers to look into the code and give me a clear answer: is there an existing system or even part of a system that I can rely on or use as a starting point?</p>
+<p data-reveal>When they examined the codebase, they found an unstructured and chaotic approach to color usage. Over time, engineers had added numerous colors without consistent logic or structure.</p>
+<p data-reveal>Some colors were named by their usage for example “Modal Overlay”, or “border”, some of them were more abstract: examples are “Primary” or Warning and ultimately, some colors were named just randomly: for example “Neutral 1”, “Neutrlal 2”, “ADA”, or “Inverse darkest”.</p>
+<p data-reveal>This made it challenging to understand the logic behind these colors and how to apply them effectively to the UI.</p>
+<figure data-reveal><img src="../../assets/img/colors-chaotic-names-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Poor dark mode support</h3>
+<p data-reveal>Another significant issue I identified was the poor support for dark mode. The existing implementation was a simple color inversion, which often led to unintended and visually unappealing results.</p>
+<p data-reveal>This approach disregarded the nuances of proper dark mode design, where colors need to be carefully adjusted to maintain readability, contrast, and visual hierarchy.</p>
+<figure data-reveal><img src="../../assets/img/colors-poor-dark-mode-support-3.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Accessibility</h3>
+<p data-reveal>And finally, an accessibility issue was identified: the primary brand colors did not meet accessibility standards when paired with white text, which was widely used throughout the product.</p>
+<figure data-reveal><img src="../../assets/img/colors-problem-accessibility-2-1-2048x630-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Problem outline</h3>
+<h4 class="sub" data-reveal>Chaos in the color variables</h4>
+<p data-reveal>There was no logic or structure, and over time, multiple developers had contributed to the codebase, leading to a total breakdown in the color naming conventions.</p>
+<h4 class="sub" data-reveal>Poor dark mode support</h4>
+<p data-reveal>The existing implementation was a simple color inversion, which led to unintended and visually unappealing results.</p>
+<h4 class="sub" data-reveal>Inaccessible brand colors</h4>
+<p data-reveal>The primary brand colors did not meet accessibility standards when paired with white text, which was widely used throughout the product.</p>
+<h3 class="h" data-reveal>Solution</h3>
+<p data-reveal>To create a more robust and functional color system, I began by introducing Static and Semantic color variables.</p>
+<figure data-reveal><img src="../../assets/img/colors-solution-3-2048x910-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Static Colors</h3>
+<p data-reveal>Static colors are the basic colors that form company’s brand. Designers rely on them everywhere: to build the UI, Illustrations, complex charts, banners and ads, and literally anything in MSB products.</p>
+<p data-reveal>These values are static and not themable. They have no meaning, and their names are representing their values (the hues). Green is green and red is red. It’s hard to misunderstood the value of these colors.</p>
+<p data-reveal>I expanded the color palette to include more static colors that support a wider range of use cases beyond basic branding. These new colors addressed essential needs such as interactive component states, including hover, pressed, and disabled states, as well as positive feedback messages, error indicators, and warnings.</p>
+<figure data-reveal><img src="../../assets/img/colors-static-colors-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Semantic Colors</h3>
+<p data-reveal>On top of that, I introduced semantic color variables. Semantic color variables are an additional layer between static colors and the UI. They are defined based on the role they play in the interface.</p>
+<figure data-reveal><img src="../../assets/img/colors-semantic-colors-2.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Naming convention</h3>
+<p data-reveal>To help designers and engineers understand the logic behind semantic color tokens, I divided the token names into clear categories.</p>
+<p data-reveal>I used generic names for the color tokens, which means that color names don’t rely on our component inventory. So designers can build their custom components using the same color tokens, and they will still automatically support theming.</p>
+<figure data-reveal><img src="../../assets/img/colors-naming-convention-2.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Examples</h3>
+<p data-reveal>Here are a few examples of how these tokens can be applied to the UI.</p>
+<figure data-reveal><img src="../../assets/img/colors-example-3.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<figure data-reveal><img src="../../assets/img/colors-example-5-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Testing the Color System</h3>
+<p data-reveal>To ensure the new semantic color system was intuitive, I ran a fun testing exercise called Guess the Color. Designers and engineers reviewed UI elements and identified their semantic colors, helping us assess how well the system communicated its purpose.</p>
+<p data-reveal>With an 85% success rate, the exercise validated the system’s clarity and aligned the team on its usage.</p>
+<figure data-reveal><img src="../../assets/img/colors-testing-2.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Dark Mode</h3>
+<p data-reveal>I implemented separate light and dark mode color palettes to enhance user experience and accessibility. For dark mode, I intentionally desaturated the colors by default to prioritize improved readability in low-light environments.</p>
+<figure data-reveal><img src="../../assets/img/colors-dark-mode-4.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Data Visualisation Colors</h3>
+<p data-reveal>In addition to semantic color tokens, I included a specific set of tokens designed for data representation, such as charts, graphs, and other forms of data visualization. These tokens are essentially a collection of miscellaneous colors. They serve as a palette of distinct colors without any underlying logical meaning tied to context or function.</p>
+<p data-reveal>These tokens are themable, allowing them to adapt to different design requirements or themes, but their primary purpose is to provide visual differentiation in data presentation, ensuring clarity and accessibility in visualizations.</p>
+<figure data-reveal><img src="../../assets/img/colors-data-visualisation.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h3 class="h" data-reveal>Documentation</h3>
+<p data-reveal>Establishing a logical system with semantic colors is important, but equally critical is creating thorough documentation with clear examples to ensure proper understanding and consistent application.</p>
+<p data-reveal>I created comprehensive documentation for the design system using zeroheight, ensuring all details, including the semantic color system, are easily accessible to everyone internally.</p>
+<figure data-reveal><img src="../../assets/img/colors-documentation.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<h2 class="section-head" data-reveal><span>Results</span><i></i><b>02</b></h2>
+<h3 class="h" data-reveal>Key takeaways</h3>
+<p data-reveal>My work resulted in significant improvements to the color system:</p>
+<ul data-reveal><li>Semantic color variables. I established semantic color variables for clear, consistent use across the products.</li><li>Documentation. Provided comprehensive documentation to guide designers and engineers on how to apply these variables effectively.</li><li>Theming and Dark Mode Support. Built a strong foundation to support dark mode and future theming.</li><li>Accessibility. Enhanced the main brand color to ensure better accessibility and compliance with contrast standards.</li></ul>
+<figure data-reveal><img src="../../assets/img/colors-results-4-scaled-1.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<figure data-reveal><img src="../../assets/img/colors-results-demo-7-1024x586.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<figure data-reveal><img src="../../assets/img/colors-results-demo-8-1024x586.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<figure data-reveal><img src="../../assets/img/colors-results-demo-9-1024x586.webp" alt="Midland State Bank Color System Overhaul – illustration" loading="lazy"></figure>
+<p class="thanks" data-reveal>Thank you for scrolling all the way!</p>
 </article>
-<section class="wrap more">
-  <h2 class="section">Explore more work</h2>
+<section class="wrap">
+  <h2 class="section-head" data-reveal><span>More work</span><i></i></h2>
   <div class="grid">
-<a class="card" href="../../portfolio/patpat/" data-cat="Mobile App">
-  <img src="../../assets/img/patpat-featured-5.webp" alt="" loading="lazy">
-  <span class="card-title">PatPat Search Revamp</span>
-  <span class="card-cat">Mobile App</span>
+<a class="card" href="../../portfolio/patpat/" data-cat="Mobile App" data-reveal>
+  <span class="card-text">
+    <span class="card-title">PatPat Search Revamp</span>
+    <span class="card-cat">Mobile App</span>
+  </span>
+  <span class="card-media"><img src="../../assets/img/patpat-featured-5.webp" alt="" width="1200" height="509" loading="lazy"></span>
 </a>
-<a class="card" href="../../portfolio/lucid/" data-cat="Web Design">
-  <img src="../../assets/img/lucid-featured-5.webp" alt="" loading="lazy">
-  <span class="card-title">Lucid Motors</span>
-  <span class="card-cat">Web Design</span>
-</a>
-<a class="card" href="../../portfolio/outdoorsy/" data-cat="Design Systems">
-  <img src="../../assets/img/outdoorsy-featured-5.webp" alt="" loading="lazy">
-  <span class="card-title">Outdoorsy</span>
-  <span class="card-cat">Design Systems</span>
+<a class="card" href="../../portfolio/lucid/" data-cat="Web Design" data-reveal>
+  <span class="card-text">
+    <span class="card-title">Lucid Motors</span>
+    <span class="card-cat">Web Design</span>
+  </span>
+  <span class="card-media"><img src="../../assets/img/lucid-featured-5.webp" alt="" width="1200" height="509" loading="lazy"></span>
 </a>
   </div>
 </section>
 </main>
-<footer class="site-footer">© Olga Tochilin · 2026</footer>
+<footer class="site-footer"><span>© Olga Tochilin · 2026</span><a href="#top" class="to-top">Back to top ↑</a></footer>
+<script src="../../assets/site.js" defer></script>
 </body>
 </html>
