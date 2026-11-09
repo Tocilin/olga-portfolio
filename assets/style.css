@@ -207,3 +207,19 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
   .js [data-reveal]{opacity:1;transform:none}
 }
+
+/* ---------- What I do: dotted-shape cards ---------- */
+#what{padding-top:24px;padding-bottom:0}
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.what-card{
+  display:flex;flex-direction:column;justify-content:space-between;gap:32px;
+  border:var(--hair);border-radius:var(--radius);padding:clamp(20px,2.4vw,32px);
+  min-height:clamp(320px,30vw,400px);background:var(--n0);
+  transition:border-color .3s var(--ease-ui);
+}
+.what-card:hover{border-color:var(--n900)}
+.dots{width:78%;max-width:260px;height:auto;color:var(--n900);overflow:visible;
+  transition:transform .6s var(--ease-out)}
+.what-card:hover .dots{transform:translateY(-4px)}
+.what-card h3{margin:0;font-size:clamp(20px,1.9vw,26px);line-height:1.25;font-weight:500;letter-spacing:-.02em;white-space:nowrap}
+@media (max-width:820px){.what-grid{grid-template-columns:1fr}.what-card{min-height:0}.dots{width:60%;max-width:220px}.what-card h3{font-size:24px}}
