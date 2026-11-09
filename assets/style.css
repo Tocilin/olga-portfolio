@@ -80,6 +80,19 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
 .btn-outline::before{background:var(--n900)}
 .btn-outline:hover span{color:#fff}
 
+/* tertiary text link with "opens in new tab" icon */
+.link-ext{
+  display:inline-flex;align-items:center;gap:8px;height:64px;padding:0 8px;
+  font-size:18px;text-decoration:none;border-radius:999px;
+}
+.link-ext span:first-child{background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:background-size .3s var(--ease-out)}
+.link-ext:hover span:first-child{background-size:0 1px;background-position:100% 100%}
+.link-ext svg{width:1.1em;height:1.1em;transition:transform .3s var(--ease-out)}
+.link-ext:hover svg{transform:translate(2px,-2px)}
+.link-ext:active{transform:scale(.97);transition:transform 80ms}
+.link-ext:focus-visible{outline:2px solid var(--n900);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
 /* ---------- layout ---------- */
 .wrap{max-width:var(--max);margin:0 auto;padding:var(--space,96px) var(--edge)}
 .wrap.narrow{max-width:calc(var(--read) + 2*var(--edge))}
@@ -187,6 +200,7 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
   .site-header.is-stuck .header-inner{max-width:100%}
   .hero-meta{flex-direction:column;align-items:center;gap:10px}
   .btn{height:56px;padding:0 28px;font-size:17px}
+  .link-ext{height:56px;font-size:17px}
   .hero-cta{gap:12px}
   .section-head{gap:16px}
 }
