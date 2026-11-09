@@ -50,15 +50,16 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
 }
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:400;font-size:17px}
 .mono{
-  display:grid;place-items:center;width:48px;height:48px;border-radius:50%;
+  flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;
   background:var(--n900);color:#fff;font-size:15px;font-weight:600;letter-spacing:.04em;
   transition:width .5s var(--ease-out),height .5s var(--ease-out);
 }
 .is-stuck .mono{width:40px;height:40px}
 .site-header nav{display:flex;align-items:center;gap:6px;font-size:17px}
-.site-header nav a{text-decoration:none;padding:8px 14px;border-radius:999px;transition:background .2s var(--ease-ui)}
+.site-header nav a{white-space:nowrap;text-decoration:none;padding:8px 14px;border-radius:999px;transition:background .2s var(--ease-ui)}
 .site-header nav a:hover{background:var(--n100)}
 .nav-cta{display:inline-flex;align-items:center;gap:8px}
+.nav-cta svg{width:1.05em;height:1.05em}
 
 /* ---------- buttons: fill slides up on hover, quick press ---------- */
 .btn{
@@ -191,6 +192,10 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
   .exp .yr{grid-column:2;grid-row:1;text-align:right}
   .exp .role{grid-column:1;grid-row:1}
   .exp .co{grid-column:1/-1;text-align:left}
+}
+@media (max-width:520px){
+  .brand-name{display:none}
+  .site-header nav a{padding:8px 10px}
 }
 @media (max-width:600px){
   body{font-size:17px}
