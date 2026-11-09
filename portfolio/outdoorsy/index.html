@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bonfire: Outdoorsy Design System — Olga Tochilin</title>
+<meta name="description" content="Bonfire: Outdoorsy Design System">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../">Olga Tochilin</a>
+  <nav>
+    <a href="../../#work">Work</a>
+    <a href="../../#experience">Experience</a>
+    <a href="../../assets/Olga-Tochilin-PD.pdf" target="_blank" rel="noopener">Résumé</a>
+  </nav>
+</header>
+<main class="project">
+<article class="wrap narrow">
+  <p class="back"><a href="../../#work">← All work</a></p>
+  <h1>Bonfire: Outdoorsy Design System</h1>
+  <dl class="meta"><dt>Client</dt><dd>Outdoorsy</dd><dt>My role</dt><dd>Lead Designer</dd></dl>
+  <h3 class="h">Overview</h3>
+<p>In this case study, I’ll walk you through my work on the Bonfire Design System for Outdoorsy, highlighting key processes and design decisions.</p>
+<figure><img src="../../assets/img/bonfire-featured.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">What is Outdoorsy?</h3>
+<p>Outdoorsy is the largest RV marketplace for renting RVs. It connects local RV motorhomes and camper-van owners with people who want to rent them. Outdoorsy website and mobile app allow guest users to find the perfect RV, book it and hit the road while RV owners can easily create RV listings, accept new bookings and earn cash.</p>
+<figure><img src="../../assets/img/What-is-outdoorsy-1.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/What-is-outdoorsy-2.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Problems</h3>
+<p>At Outdoorsy, things move faster than the Flash. With multiple teams and parallel development cycles, it is difficult for designers to be constantly aligned and consistent among the teams.</p>
+<p>Designers used to rely heavily on multiple internal UI kits which were not regularly updated or maintained. As a result, they inherited a lot of design debt and disparity across products and platforms.</p>
+<h4 class="sub">Multiple and incomplete component libraries</h4>
+<h4 class="sub">No consistency between Design and Code</h4>
+<h4 class="sub">Inefficient collaboration without a Design System</h4>
+<h4 class="sub">Inconsistent UI across products</h4>
+<h4 class="sub">Messy Code</h4>
+<h4 class="sub">Compromised Accessibility</h4>
+<h3 class="h">Goals</h3>
+<p>The primary objective was to create a comprehensive design system that could effectively resolve several key challenges.</p>
+<figure><img src="../../assets/img/bonfire-goals.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Approach</h3>
+<p>At the beginning of the project, Outdoorsy had two products: Outdoorsy renting products for Guests (Web, iOS, Android) and Outdoorsy admin panel (Web only). Those products had very little in common. They were visually inconsistent and looked like they belonged to different companies.</p>
+<p>I started with the overall architecture of the system. Following (but adjusting) the famous Brad Frost’s Atomic Design methodology.</p>
+<figure><img src="../../assets/img/bonfire-architecture.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Figma Structure</h3>
+<p>From Figma libraries perspective, I came up with the structure.</p>
+<p>The challenge was that each platform (web and native) had its own specific to platform components, even though components can be used across the products.</p>
+<figure><img src="../../assets/img/bonfire-figma-structure.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Design tokens</h3>
+<p>When the architecture was defined, I started building the foundation of the Design System or Design tokens.</p>
+<figure><img src="../../assets/img/bonfire-colors.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-typo.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-border-radius.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-icons.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-icons-guide.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-viewports.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-units.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<figure><img src="../../assets/img/bonfire-units-guide.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Components: Design process</h3>
+<p>When tokens were defined I started building components one by one. Every component requires a lot of collaboration between designers and developers. If I could simplify the design process it would look like this:</p>
+<figure><img src="../../assets/img/bonfire-process.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Audit</h3>
+<p>I usually start with auditing the existing design to simply learn the current product:</p>
+<ul><li>collect a bunch of screenshots across the products to understand the use cases</li><li>reveal inconsistencies</li><li>highlight the issues: usability, accessibility, legal, etc.</li></ul>
+<figure><img src="../../assets/img/bonfire-audit.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Research</h3>
+<p>Then I go and look at the other Design systems. I do an external audit:</p>
+<ul><li>learn about the specific component and its best practices</li><li>learn how other companies deal with common issues</li></ul>
+<figure><img src="../../assets/img/bonfire-research.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Build</h3>
+<p>The next step is to build the component, which is my favorite part. I leverage Figma’s component properties to create a robust, flexible, and, most importantly, easy-to-use component that aligns seamlessly with code implementation.</p>
+<figure><img src="../../assets/img/bonfire-build.gif" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Validation</h3>
+<p>After a component is built, it needs to be validated. Usually, I apply it to different scenarios and set up a design critique session to get designers’ and developers’ feedback and to make sure I am not missing some edge cases.</p>
+<figure><img src="../../assets/img/bonfire-validate.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Document</h3>
+<p>The next phase is to document all the knowledge. We documented the Outdoorsy design System in Zero Heights. Usually include every detail in the documentation:</p>
+<ul><li>definition</li><li>anatomy</li><li>properties</li><li>best practices</li><li>etc</li></ul>
+<figure><img src="../../assets/img/bonfire-document.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Present</h3>
+<p>The final step is a presentation. Not everybody has an opportunity to participate in design critique sessions or follow all the changes that the design system team has made. That’s why it’s important to communicate and present the design system to a larger audience: developers, project managers, and designers.</p>
+<figure><img src="../../assets/img/bonfire-present.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<h3 class="h">Outcomes</h3>
+<p>As a result, 4 Figma libraries were created and set up for future use. These libraries contain 8 design tokens and 15 components that were documented in Zero Heights to be used by designers, developers, and other users.</p>
+<figure><img src="../../assets/img/bonfire-outcomes.webp" alt="Bonfire: Outdoorsy Design System – illustration" loading="lazy"></figure>
+<p class="thanks">Thank you for scrolling all the way!</p>
+</article>
+<section class="wrap more">
+  <h2 class="section">Explore more work</h2>
+  <div class="grid">
+<a class="card" href="../../portfolio/patpat/" data-cat="Mobile App">
+  <img src="../../assets/img/patpat-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">PatPat Search Revamp</span>
+  <span class="card-cat">Mobile App</span>
+</a>
+<a class="card" href="../../portfolio/midland/" data-cat="Design Systems">
+  <img src="../../assets/img/midland-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">Midland State Bank Color System Overhaul</span>
+  <span class="card-cat">Design Systems</span>
+</a>
+<a class="card" href="../../portfolio/lucid/" data-cat="Web Design">
+  <img src="../../assets/img/lucid-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">Lucid Motors</span>
+  <span class="card-cat">Web Design</span>
+</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">© Olga Tochilin · 2026</footer>
+</body>
+</html>

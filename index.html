@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olga Tochilin</title>
+<meta name="description" content="Olga Tochilin — designer focused on user experience, visual design and design systems.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">Olga Tochilin</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="assets/Olga-Tochilin-PD.pdf" target="_blank" rel="noopener">Résumé</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <h1>Olga Tochilin</h1>
+  <p class="lead">A designer focused on user experience and visual design with a passion for <em>design systems</em>.</p>
+</section>
+<section id="work" class="wrap">
+  <h2 class="section">Work</h2>
+  <div class="filters"><button type="button" data-filter="All" class=active>All</button><button type="button" data-filter="Design Systems">Design Systems</button><button type="button" data-filter="Mobile App">Mobile App</button><button type="button" data-filter="Web Design">Web Design</button></div>
+  <div class="grid">
+<a class="card" href="portfolio/patpat/" data-cat="Mobile App">
+  <img src="assets/img/patpat-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">PatPat Search Revamp</span>
+  <span class="card-cat">Mobile App</span>
+</a>
+<a class="card" href="portfolio/midland/" data-cat="Design Systems">
+  <img src="assets/img/midland-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">Midland State Bank Color System Overhaul</span>
+  <span class="card-cat">Design Systems</span>
+</a>
+<a class="card" href="portfolio/lucid/" data-cat="Web Design">
+  <img src="assets/img/lucid-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">Lucid Motors</span>
+  <span class="card-cat">Web Design</span>
+</a>
+<a class="card" href="portfolio/outdoorsy/" data-cat="Design Systems">
+  <img src="assets/img/outdoorsy-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">Outdoorsy</span>
+  <span class="card-cat">Design Systems</span>
+</a>
+<a class="card" href="portfolio/jpmorgan-chase/" data-cat="Web Design">
+  <img src="assets/img/jpmc-featured-5.webp" alt="" loading="lazy">
+  <span class="card-title">JPMorgan Chase</span>
+  <span class="card-cat">Web Design</span>
+</a>
+  </div>
+</section>
+<section id="experience" class="wrap narrow">
+  <h2 class="section">Experience</h2>
+  <ul class="exp"><li><span class="role">Design Lead</span><span class="co">Code & Theory</span><span class="yr">2023 – Present</span></li><li><span class="role">Sr. Product Designer</span><span class="co">YML</span><span class="yr">2021</span></li><li><span class="role">Sr. Product Designer</span><span class="co">Alight Solutions</span><span class="yr">2020</span></li><li><span class="role">UX Designer</span><span class="co">United Airlines</span><span class="yr">2019</span></li><li><span class="role">Product Designer</span><span class="co">Walgreens</span><span class="yr">2018</span></li><li><span class="role">Product Designer</span><span class="co">BookingWhale</span><span class="yr">2016</span></li></ul>
+  <p><a class="btn" href="assets/Olga-Tochilin-PD.pdf" target="_blank" rel="noopener">View résumé (PDF)</a></p>
+</section>
+</main>
+<script>
+document.querySelectorAll('.filters button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.filters button').forEach(function(x){x.classList.toggle('active',x===b)});
+    var f=b.dataset.filter;
+    document.querySelectorAll('.card').forEach(function(c){c.hidden=f!=='All'&&c.dataset.cat!==f});
+  });
+});
+</script>
+<footer class="site-footer">© Olga Tochilin · 2026</footer>
+</body>
+</html>
