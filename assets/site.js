@@ -28,16 +28,4 @@
   } else {
     els.forEach(function (el) { el.classList.add('in'); });
   }
-
-  // Work filter
-  var buttons = document.querySelectorAll('.filters button');
-  buttons.forEach(function (b) {
-    b.addEventListener('click', function () {
-      buttons.forEach(function (x) { x.classList.toggle('active', x === b); });
-      var f = b.dataset.filter;
-      document.querySelectorAll('#work .card').forEach(function (c) {
-        c.hidden = f !== 'All' && c.dataset.cat !== f;
-      });
-    });
-  });
 })();
