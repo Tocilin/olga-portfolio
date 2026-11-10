@@ -33,7 +33,7 @@
   // away to reveal the real image. Plays once; skipped for reduced motion; no libraries.
   (function pixelReveal() {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var COLS = 36, CHURN = 450, DISSOLVE = 1000;
+    var COLS = 120, CHURN = 450, DISSOLVE = 1000;
 
     document.querySelectorAll('[data-pixel]').forEach(function (host) {
       var img = host.querySelector('img');
@@ -47,46 +47,52 @@
 
       function cleanup() { done = true; canvas.remove(); }
 
+      // Mosaic is kept as a tiny COLS x rows image (one pixel per block) and scaled up with
+      // nearest-neighbour smoothing off — one cheap drawImage per frame instead of thousands of fillRects.
       function setup() {
         var r = host.getBoundingClientRect();
         if (!r.width || !r.height) return null;
-        var dpr = 1;                // blocks are large, so 1x is plenty and keeps tall images light
-        canvas.width = Math.round(r.width * dpr);
-        canvas.height = Math.round(r.height * dpr);
+        if (st && st.w === r.width && st.h === r.height) return st;   // reuse sampling + dissolve order
+        canvas.width = Math.round(r.width);
+        canvas.height = Math.round(r.height);
         var rad = getComputedStyle(host).borderRadius;
         if (!parseFloat(rad)) rad = getComputedStyle(img).borderRadius;
         canvas.style.borderRadius = rad;
-        var cell = r.width / COLS, rows = Math.ceil(r.height / cell);
-        var colors = new Array(COLS * rows).fill(null);
-        try {                       // sample the image's colours, one per cell
+        var cell = r.width / COLS, rows = Math.ceil(r.height / cell), n = COLS * rows;
+        var base = new Uint8ClampedArray(n * 3).fill(236);          // neutral grey fallback
+        try {                                                        // sample the image's colours
           var off = document.createElement('canvas');
           off.width = COLS; off.height = rows;
           var o = off.getContext('2d');
           o.imageSmoothingQuality = 'high';
           o.drawImage(img, 0, 0, COLS, rows);
           var d = o.getImageData(0, 0, COLS, rows).data;
-          for (var i = 0; i < COLS * rows; i++) colors[i] = [d[i * 4], d[i * 4 + 1], d[i * 4 + 2]];
-        } catch (e) { /* tainted/unavailable: fall back to neutral grey cells */ }
-        var thresh = [];             // dissolve order: random, biased to sweep top-left → bottom-right
+          for (var i = 0; i < n; i++) { base[i * 3] = d[i * 4]; base[i * 3 + 1] = d[i * 4 + 1]; base[i * 3 + 2] = d[i * 4 + 2]; }
+        } catch (e) { /* unavailable: keep grey */ }
+        var thresh = new Float32Array(n);   // dissolve order: random, biased to sweep top-left -> bottom-right
         for (var y = 0; y < rows; y++) for (var x = 0; x < COLS; x++)
-          thresh.push(0.6 * Math.random() + 0.4 * (x + y) / (COLS + rows));
-        return { dpr: dpr, cell: cell, rows: rows, colors: colors, thresh: thresh, w: r.width, h: r.height };
+          thresh[y * COLS + x] = 0.6 * Math.random() + 0.4 * (x + y) / (COLS + rows);
+        var small = document.createElement('canvas');
+        small.width = COLS; small.height = rows;
+        var sctx = small.getContext('2d');
+        return { cell: cell, rows: rows, n: n, base: base, thresh: thresh,
+                 small: small, sctx: sctx, data: sctx.createImageData(COLS, rows), w: r.width, h: r.height };
       }
 
       function draw(progress, churn) {
-        var s = st;
-        ctx.setTransform(s.dpr, 0, 0, s.dpr, 0, 0);
-        ctx.clearRect(0, 0, s.w, s.h);
-        for (var y = 0; y < s.rows; y++) for (var x = 0; x < COLS; x++) {
-          var i = y * COLS + x;
-          // cell alpha: stays 1 until its turn, then fades out over ~30% of the dissolve
-          var a = progress <= 0 ? 1 : Math.max(0, Math.min(1, 1 - (progress * 1.35 - s.thresh[i]) / 0.3));
-          if (a <= 0) continue;
-          var c = s.colors[i] || [236, 236, 236];
-          var k = churn ? 0.86 + Math.random() * 0.28 : 1;
-          ctx.fillStyle = 'rgba(' + Math.min(255, c[0] * k | 0) + ',' + Math.min(255, c[1] * k | 0) + ',' + Math.min(255, c[2] * k | 0) + ',' + a + ')';
-          ctx.fillRect(x * s.cell, y * s.cell, s.cell + 0.6, s.cell + 0.6);
+        var s = st, data = s.data.data, base = s.base, th = s.thresh;
+        for (var i = 0; i < s.n; i++) {
+          // alpha: 1 until the block's turn, then fades out over ~30% of the dissolve
+          var a = progress <= 0 ? 1 : 1 - (progress * 1.35 - th[i]) / 0.3;
+          a = a < 0 ? 0 : a > 1 ? 1 : a;
+          var k = churn ? 0.86 + Math.random() * 0.28 : 1, j = i * 4;
+          data[j] = base[i * 3] * k; data[j + 1] = base[i * 3 + 1] * k; data[j + 2] = base[i * 3 + 2] * k;
+          data[j + 3] = a * 255;
         }
+        s.sctx.putImageData(s.data, 0, 0);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(s.small, 0, 0, COLS, s.rows, 0, 0, COLS * s.cell, s.rows * s.cell);
       }
 
       function ready(cb) {
