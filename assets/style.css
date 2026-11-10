@@ -171,10 +171,6 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
 .thanks{text-align:center;color:var(--n600);margin:96px 0 0!important}
 .project .wrap:last-of-type{padding-top:40px}
 
-/* ---------- pixel-mosaic reveal (see site.js) ---------- */
-[data-pixel]{position:relative}
-.px-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;display:block}
-
 /* ---------- footer ---------- */
 .site-footer{
   max-width:var(--max);margin:0 auto;padding:32px var(--edge) 40px;
@@ -250,5 +246,7 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
   .dots{display:none}
   .what-layer{display:contents}
   .what-desc{position:static;order:1;width:auto;color:var(--n900);font-weight:330;pointer-events:auto}
+  /* cards sit in a sideways-swipe row: don't fade them in, or off-screen ones look blank until swiped to */
+  .js .what-card[data-reveal]{opacity:1;transform:none}
 }
 @media (prefers-reduced-motion:reduce){.what-layer{transition-duration:.01ms}}
