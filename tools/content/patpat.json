@@ -1,0 +1,554 @@
+[
+[
+"li",
+"<a href=\"#slide-out-widget-area\"> Menu </a>"
+],
+[
+"li",
+"<a href=\"/wp-content/uploads/2025/01/Olga-Tochilin-PD.pdf\">Résumé</a>"
+],
+[
+"li",
+"<a href=\"https://www.olgatochilin.com/\">Home</a>"
+],
+[
+"li",
+"<a href=\"https://www.olgatochilin.com/#work\">Work</a>"
+],
+[
+"li",
+"<a href=\"https://www.olgatochilin.com/#experience\">Experience</a>"
+],
+[
+"li",
+"<a href=\"/wp-content/uploads/2025/01/Olga-Tochilin-PD.pdf\">Résumé</a>"
+],
+[
+"h1",
+"PatPat Search Revamp"
+],
+[
+"h6",
+"Client"
+],
+[
+"h6",
+"My role"
+],
+[
+"h6",
+"Team"
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-featured-2.png",
+""
+],
+[
+"h2",
+"Overview"
+],
+[
+"p",
+"In this case study, I’ll share my contribution to improving the search experience for the PatPat mobile app as part of the YML team. I worked with PatPat for a year on various iOS projects, but this case focuses on one that was not only designed but also implemented and analyzed."
+],
+[
+"p",
+"Typically, in an agency setting, we don’t get to see the results of our work—we deliver and move on. However, this project was different, allowing me to stay long enough to see the impact of our efforts."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-overview-2.png",
+""
+],
+[
+"h2",
+"What is PatPat?"
+],
+[
+"p",
+"PatPat is a curated online boutique of fashionable matching outfits for the whole family to bring the crew together in style."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-about-2.png",
+""
+],
+[
+"h2",
+"Problem and opportunities"
+],
+[
+"p",
+"Our analysis revealed that search performance was falling short. Collaborating with engineers, our product team gathered data to quantify the issues and confirm the need for improvements."
+],
+[
+"h1",
+"62%"
+],
+[
+"h3",
+"High Bounce Rate on Mobile"
+],
+[
+"p",
+"Approximately 62% of users exited the app within the first two minutes of use, indicating frustration or difficulty navigating to their desired content."
+],
+[
+"h1",
+"18%"
+],
+[
+"h3",
+"Low Search Usage"
+],
+[
+"p",
+"Only 18% of users engaged with the search functionality, indicating low adoption or usage based on the data available."
+],
+[
+"h1",
+"46%"
+],
+[
+"h3",
+"Search Drop-off"
+],
+[
+"p",
+"Among the users who used the search feature, 46% abandoned the process after viewing the results page, indicating they couldn’t find what they were looking for or didn’t trust the results."
+],
+[
+"h2",
+"How might we…"
+],
+[
+"p",
+"Improve the search experience of the Mobile App using best practices in usability to make it more intuitive, engaging, and effective, reducing user frustration and improving overall engagement."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-opportunity.png",
+""
+],
+[
+"h1",
+"Research"
+],
+[
+"h2",
+"User Interviews"
+],
+[
+"p",
+"Despite having quantitative data, we needed deeper qualitative insights into search usage. To address this, I collaborated with our researcher, to conduct a series of user interviews."
+],
+[
+"p",
+"We recruited participants through the <a href=\"https://usertesting.com/\">usertesting.com</a> platform to gather firsthand feedback and better understand user behavior and pain points."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-user-interviews-2.png",
+""
+],
+[
+"h2",
+"What we learned"
+],
+[
+"h4",
+"Low Visibility"
+],
+[
+"p",
+"Many users mentioned that the search bar was not prominent enough, leading them to rely on browsing instead. They expected the search bar to be located at the top of the home screen but found it buried among other UI elements."
+],
+[
+"h4",
+"No search suggestions"
+],
+[
+"p",
+"Users noticed there were no suggestions while typing, which made it harder to find ideas. They expected suggestions, but the search only worked for exact words, making it less helpful."
+],
+[
+"h4",
+"Irrelevant Search Results"
+],
+[
+"p",
+"A significant number of users reported that the search results didn’t always match their queries. For example, searching for “shoes” might display unrelated products, leading to confusion and dissatisfaction."
+],
+[
+"h4",
+"Missed Filters and Sorting Options"
+],
+[
+"p",
+"Some users pointed out that they wanted more filters or sorting options directly within the search results (e.g., price range, categories). The lack of these features made the search feel incomplete."
+],
+[
+"h2",
+"Competitive analysis matrix"
+],
+[
+"p",
+"In addition to gathering quantitative and qualitative insights, I conducted a competitive analysis to benchmark search functionality against both direct and indirect competitors."
+],
+[
+"p",
+"This analysis helped identify common industry standards and emerging trends in search experiences."
+],
+[
+"p",
+"I evaluated key metrics such as search bar visibility, autosuggestions, typo correction, result relevance, filtering and sorting options, the handling of empty search results and more."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-competitive-analysis-matrix-1.png",
+""
+],
+[
+"h2",
+"“Desk” research"
+],
+[
+"p",
+"Finally, I conducted desk research to gather insights from industry-leading sources without direct user interaction. This involved reviewing best practices, usability guidelines, and research findings from reputable organizations such as Baymard Institute, Nielsen Norman Group (NNG), and Forrester Research."
+],
+[
+"p",
+"This research provided a solid foundation for our decisions, helping us align with established UX principles and identify proven strategies to improve the search experience."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-desk-research-min.png",
+""
+],
+[
+"h2",
+"Product decisions"
+],
+[
+"p",
+"After conducting research and gathering feedback, the following product decisions were made."
+],
+[
+"h4",
+"Search bar placement and visibility"
+],
+[
+"p",
+"Ensure the search bar is easily accessible from key screens and remains visible when scrolling for quick access."
+],
+[
+"h4",
+"Display popular and trending searches"
+],
+[
+"p",
+"Showcase trending or popular searches to inspire users and encourage exploration."
+],
+[
+"h4",
+"Retain recent search queries"
+],
+[
+"p",
+"Store and display users’ recent search queries to help them quickly revisit previous searches without retyping."
+],
+[
+"h4",
+"Implement effective autosuggestions"
+],
+[
+"p",
+"Introduce an autosuggest feature that offers relevant suggestions as users type, helping them find items faster and stay focused on their intent."
+],
+[
+"h4",
+"Preserve search queries after submission"
+],
+[
+"p",
+"Ensure the original search input remains visible in the search bar after submission. This helps users refine their search without retyping their query from scratch."
+],
+[
+"h3",
+"Correct typos automatically"
+],
+[
+"p",
+"Integrate typo detection and correction to assist users in finding relevant products even if they enter incorrect search terms."
+],
+[
+"h5",
+"Display the number of search results"
+],
+[
+"p",
+"Show users the total number of matching results to help them gauge the effort needed to browse through available options."
+],
+[
+"h5",
+"Avoid ‘no results’ dead ends"
+],
+[
+"p",
+"Instead of blank pages, suggest related items or alternative search queries when no exact matches are found."
+],
+[
+"h4",
+"Provide accurate and relevant results"
+],
+[
+"p",
+"Search results should prioritize relevance and accuracy to help users find what they need quickly. The most relevant items should appear on the first page."
+],
+[
+"h2",
+"Out of scope"
+],
+[
+"p",
+"Some features were left out of scope due to their complexity and were planned as standalone projects:"
+],
+[
+"p",
+"Filters and sorting"
+],
+[
+"p",
+"This feature was too large to fit within the scope of the project and was prioritized for future development."
+],
+[
+"p",
+"Android and web apps"
+],
+[
+"p",
+"The team chose to experiment on iOS first, the most popular platform, before expanding to web and Android if successful."
+],
+[
+"p",
+"Search results layout"
+],
+[
+"p",
+"Since the store focuses solely on clothing, the product team considered layout optimization a lower priority."
+],
+[
+"h1",
+"Design"
+],
+[
+"h2",
+"Search bar placement and visibility"
+],
+[
+"p",
+"The search bar has been improved by placing it prominently on key screens and ensuring it remains visible while scrolling. This enhancement makes it easier for users to locate and use the search function without unnecessary effort."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-placement.png",
+""
+],
+[
+"h2",
+"Trending searches"
+],
+[
+"p",
+"Popular search suggestions have been introduced to inspire users and encourage exploration. This enhancement helps users discover trending items and engage with the app even when they don’t have a specific product in mind."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-trending.png",
+""
+],
+[
+"h2",
+"Recent search queries"
+],
+[
+"p",
+"Recent search queries have been introduced to help users quickly revisit previous searches without retyping. This improvement enhances convenience and encourages repeated engagement with the search feature."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-recent-3.png",
+""
+],
+[
+"h2",
+"Autosuggestions"
+],
+[
+"p",
+"An autosuggest feature has been implemented to provide relevant suggestions as users type, helping them find items faster and stay focused on their intent."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-autosuggestions.png",
+""
+],
+[
+"h2",
+"Preserve search queries after submission"
+],
+[
+"p",
+"The search input now remains visible in the search bar after submission, allowing users to refine their search without needing to retype their query from scratch."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-preserve-search.png",
+""
+],
+[
+"h2",
+"Display the number of search results"
+],
+[
+"p",
+"The total number of matching results is now displayed, helping users gauge the effort needed to browse through available options and make informed decisions."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-number-results.png",
+""
+],
+[
+"h2",
+"Spell Correction"
+],
+[
+"p",
+"Typo detection and correction have been implemented to help users find relevant products even if they enter incorrect search terms, ensuring a smoother search experience."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-spell-correction.png",
+""
+],
+[
+"h2",
+"Improved ‘no results’ page"
+],
+[
+"p",
+"The ‘no results’ page has been enhanced with an “Other options to consider” section, featuring flash sales, new arrivals, and trending items. This update helps users explore relevant products even when their initial search doesn’t yield exact matches."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-no-results.png",
+""
+],
+[
+"h2",
+"Accurate and relevant results"
+],
+[
+"p",
+"Search relevancy has been significantly improved by refining the ranking algorithm to consider multiple parameters, each with a different weight, ensuring users find what they need quickly."
+],
+[
+"p",
+"The most relevant items are now prioritized and appear first, enhancing the overall shopping experience."
+],
+[
+"p",
+"For example, if a user searches for “black jeans,” search results are ranked based on:"
+],
+[
+"li",
+"Exact match – Items with “black jeans” in the title rank highest."
+],
+[
+"li",
+"Popularity – Frequently bought jeans appear at the top."
+],
+[
+"li",
+"Ratings – Higher-rated products rank above lower-rated ones."
+],
+[
+"li",
+"Availability – In-stock items show before limited or out-of-stock options."
+],
+[
+"li",
+"etc."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/patpat-relevant-results.png",
+""
+],
+[
+"h1",
+"Results"
+],
+[
+"h1",
+"38%"
+],
+[
+"h3",
+"Increased user retention on mobile"
+],
+[
+"p",
+"Following the search experience improvements, only 38% of users exited the app within the first two minutes, indicating a significant reduction in frustration and improved content discoverability."
+],
+[
+"h1",
+"52%"
+],
+[
+"h3",
+"Higher search engagement"
+],
+[
+"p",
+"Search usage increased to 52%, showing that users found the feature more accessible and intuitive, leading to greater adoption and interaction."
+],
+[
+"h1",
+"24%"
+],
+[
+"h3",
+"Reduced search drop-off"
+],
+[
+"p",
+"Search drop-off decreased to 24%, demonstrating improved trust in the search results and a better alignment with user expectations."
+],
+[
+"h2",
+"Key takeaways"
+],
+[
+"p",
+"This project reinforced the importance of a user-centered, data-driven approach to improving search functionality. By combining qualitative feedback with quantitative data, collaborating across teams, and benchmarking industry best practices, we successfully enhanced the search experience and drove meaningful improvements."
+],
+[
+"li",
+"Collaboration is key: Close teamwork between design, product, and engineering ensured feasible and impactful solutions."
+],
+[
+"li",
+"Balancing scope and priorities: Some features were deferred for future implementation, highlighting the need to focus on high-impact improvements first."
+],
+[
+"li",
+"Data-driven design works: Using research insights to guide decisions led to measurable improvements in user engagement and satisfaction."
+],
+[
+"h1",
+"Thank you for scrolling all the way!"
+]
+]

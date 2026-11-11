@@ -1,7 +1,13 @@
 # Olga Tochilin — portfolio (olgatochilin.com)
 
 Static site: plain HTML, one stylesheet (`assets/style.css`) and one small script
-(`assets/site.js`). No build step, no dependencies.
+(`assets/site.js`). Vercel serves the committed files as they are (no build on deploy).
+
+**The HTML pages are generated** by `python3 tools/build.py` from `tools/build.py` and
+`tools/content/*.json` (see `tools/README.md`). Never edit `index.html` or
+`portfolio/*/index.html` by hand: change the generator or the content, run the build, and commit
+the regenerated HTML with the source change. `assets/style.css` and `assets/site.js` are edited
+directly.
 
 ## Publishing (standing permission from the owner)
 
@@ -26,9 +32,10 @@ nothing else to click.
   from olgadesignsystems.com; their cover tiles are `assets/img/franky-featured.webp`
   and `assets/img/mayo-featured.webp`.
 - `assets/` — `style.css`, `site.js`, `fonts/`, `img/`, and the résumé PDF
+- `tools/` — the page generator, case-study content and notes (kept out of the public deploy via `.vercelignore`)
 
-The header and footer markup is duplicated in every page, so a change to the
-nav or footer must be made in all six HTML files.
+The header and footer live in `page()` in `tools/build.py` and are written into every page by the
+build, so one edit there updates all pages.
 
 ## Hosting
 

@@ -1,0 +1,336 @@
+[
+[
+"meta",
+{
+"lead": "Exploring my process of creating Mayo Clinic Design System components, with real examples throughout.",
+"client": "Mayo Clinic",
+"role": "Lead Designer – Design System"
+}
+],
+[
+"h1",
+"Mayo Clinic"
+],
+[
+"h2",
+"Overview"
+],
+[
+"p",
+"In this case study, I will show and explain my process of creating components for Mayo Clinic Design System. I will share real examples every step of the way."
+],
+[
+"h2",
+"Background"
+],
+[
+"p",
+"I was a part of Mayo Clinic Design Systems team and was responsible for creating highly polished Figma components for Mayo Clinic Design System, testing and validating them among designers and engineers, writing documentation, and delivering to engineers for implementation."
+],
+[
+"h2",
+"About Mayo Clinic"
+],
+[
+"p",
+"Mayo Clinic is a nonprofit organization committed to clinical practice, education, and research, providing expert, whole-person care to everyone who needs healing."
+],
+[
+"p",
+"Mayo Clinic defines quality as a comprehensive look at all patient experience aspects including technology."
+],
+[
+"img",
+"mayo-mayo02-scaled.webp",
+"About Mayo Clinic"
+],
+[
+"h2",
+"Task"
+],
+[
+"p",
+"I created a dozen of components for Mayo Clinic Design System, and I’m going to take you through the process of making one – accordion."
+],
+[
+"img",
+"mayo-mayo03.webp",
+"Task"
+],
+[
+"h2",
+"Challenge"
+],
+[
+"p",
+"While creating Figma components, some of the challenges were to ensure that components are built based on highest standards, scalable and flexible enough to cover multiple use cases, follows <a href=\"https://www.w3.org/TR/WCAG21/\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG accessibility guidelines</a>, consistent with the rest of the components, and supports localization."
+],
+[
+"li",
+"<strong>Highest standards. </strong>Build components that are simple, intuitive, and easy to use."
+],
+[
+"li",
+"<strong>Scalable and flexible. </strong>Make sure components are scalable and could be extended in the future to support multiple use cases."
+],
+[
+"li",
+"<strong>Consistency. </strong>Achieve consistency between components across Mayo Clinic products."
+],
+[
+"li",
+"<strong>Accessibility. </strong>Design components that meet <em>Web Content Accessibility Guidelines (WCAG) requirements</em>"
+],
+[
+"li",
+"<strong>Documentation. </strong>Provide robust documentation that leaves no questions how to use, and more importantly, how not to use components."
+],
+[
+"li",
+"<strong>Localization. </strong>Mayo Clinic is a global company. It exists in 7 countries with different languages and different cultures. With this in mind, the goal was to create components that would work in other languages (including RTL)."
+],
+[
+"h2",
+"Process"
+],
+[
+"p",
+"I’ll take <strong>Accordion component</strong> as an example to walk you through the process."
+],
+[
+"p",
+"There were 2 big phases of building a component: <strong>design</strong> and <strong>implementation</strong>. The design phase was not a linear process even though it might look like it. It required a lot of back and forth collaboration between designers and developers, multiple iterations, and testing."
+],
+[
+"p",
+"If I simplify the process, it will include the following steps: Audit, Research, Build, Validate, Document, and Present."
+],
+[
+"img",
+"mayo-mayo04.webp",
+"Process"
+],
+[
+"h2",
+"Audit"
+],
+[
+"p",
+"It all starts with the audit. The audit of the internal inventory allowed me to learn everything about the accordion that’s available in the product today. I was collecting a bunch of screenshots across the products to understand the use cases, revealing inconsistencies, and highlighting various issues: usability, accessibility, and others."
+],
+[
+"img",
+"mayo-mayo05.webp",
+"Audit"
+],
+[
+"h2",
+"Research"
+],
+[
+"p",
+"After the audit had been done, I did an external audit or research to learn everything about the accordion and its best practices in other popular Design Systems. I also learned what other companies did with common issues by reading research articles."
+],
+[
+"p",
+"☝️ PRO Tip: There is a great resource <a href=\"https://component.gallery/components/accordion/\" target=\"_blank\" rel=\"noopener noreferrer\">component.gallery</a> where you can type a component name and get an overview of the component across multiple popular design systems."
+],
+[
+"img",
+"mayo-mayo06.webp",
+"Research"
+],
+[
+"h2",
+"Build"
+],
+[
+"p",
+"When the research was completed I started to properly build an accordion component. At that time I had a collection of use cases and the best practices in my pocket."
+],
+[
+"p",
+"I spoke to developers first to ensure that properties of the component and naming convention make sense from code perspective."
+],
+[
+"p",
+"I used <a href=\"https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants\" target=\"_blank\" rel=\"noopener noreferrer\">variants</a> and <a href=\"https://help.figma.com/hc/en-us/articles/5579474826519-Create-and-use-component-properties\" target=\"_blank\" rel=\"noopener noreferrer\">components props</a> to create a robust component that is aligned to code implementation as much as possible."
+],
+[
+"img",
+"mayo-mayo07.webp",
+"Build"
+],
+[
+"h2",
+"Validate"
+],
+[
+"p",
+"After the accordion had been built it was time to validate it. It’s a mandatory step to ensure all edge-cases are covered and the component itself fits the context."
+],
+[
+"p",
+"I applied this component to different scenarios in quick-designed illustrative pages."
+],
+[
+"p",
+"A design critique session was organized to get designers’ and developers’ feedback, to make sure I did not miss any edge cases. Another critique session was organized with the Mayo Clinic team to learn their opinion."
+],
+[
+"p",
+"As a result of the critique session, there was some feedback that required testing (we’ll talk about it in a moment)."
+],
+[
+"img",
+"mayo-mayo08.webp",
+"Validate"
+],
+[
+"h2",
+"Test"
+],
+[
+"p",
+"A/B and Usability tests were performed to decide on whether to use a chevron icon or a plus icon on the leading end or the following end of the accordion component."
+],
+[
+"p",
+"Users had a strong preference towards an accordion with a chevron icon on the following end (version B). The chevron icon felt more natural to them and the position was more logical."
+],
+[
+"p",
+"Based on the testing results, recommendations were to use chevron icon on the following end of the accordion."
+],
+[
+"img",
+"mayo-mayo09.webp",
+"Test"
+],
+[
+"h2",
+"Document"
+],
+[
+"p",
+"When the testing results were ready and the team approved the final decision I documented all the knowledge about the accordion."
+],
+[
+"p",
+"Documentation is crucial for design system adoption. It consolidates usage guidelines to help developers, designers, PMs and other stakeholders ship predictable UIs."
+],
+[
+"p",
+"I documented everything from high-level usage guidelines and specs to accessibility standards."
+],
+[
+"li",
+"<strong>Description</strong> of the component, its name and what it does."
+],
+[
+"li",
+"<strong>Anatomy and Specs</strong> that include sizes, spacing, and naming convention."
+],
+[
+"li",
+"<strong>Examples</strong> illustrating the component’s variants, states. Users prefer rendered code that they can interact with instead of static images."
+],
+[
+"li",
+"<strong>Design reference</strong> including visual guidelines, responsive behavior, when to use a component, and do’s and don’ts."
+],
+[
+"li",
+"<strong>Content</strong> and <strong>Accessibility</strong> Guidelines"
+],
+[
+"img",
+"mayo-mayo10.webp",
+"Document"
+],
+[
+"h2",
+"Accessibility"
+],
+[
+"p",
+"Accessible design not only helps users with disabilities; it provides better user experiences for everyone."
+],
+[
+"p",
+"Figma is pretty limited when it comes to accessibility. Documentation is a unique opportunity to document accessibility and inclusion requirements of the component, both from a UI/UX design perspective, and from a code repository perspective."
+],
+[
+"p",
+"The accordion needed to be properly built considering the following accessibility <a href=\"https://www.w3.org/TR/WCAG21/\" target=\"_blank\" rel=\"noopener noreferrer\">WCAG 2.1</a> standards"
+],
+[
+"li",
+"Screen readers must properly read the label"
+],
+[
+"li",
+"Keyboard navigation must be supported"
+],
+[
+"li",
+"Proper content guidelines"
+],
+[
+"li",
+"Localizations support"
+],
+[
+"li",
+"Labels must be dynamic to allow us to translate them into different languages"
+],
+[
+"li",
+"Accessible error handling: avoid relying on a color by itself to indicate a component validation error"
+],
+[
+"img",
+"mayo-mayo11.webp",
+"Accessibility"
+],
+[
+"h2",
+"Present"
+],
+[
+"p",
+"The final step was a presentation. The accordion updates, final decision, and documentation details were presented to a large team of designers, developers, and managers."
+],
+[
+"h2",
+"Key Learnings"
+],
+[
+"p",
+"Creating a consistent but flexible and scalable component with accessibility in mind is challenging. However, it’s doable if following things are considered:"
+],
+[
+"li",
+"Collaboration with designers and developers is a key"
+],
+[
+"li",
+"Design in the real context and consider real use cases"
+],
+[
+"li",
+"Test, test, and… test!"
+],
+[
+"li",
+"Documentation is the key to adaption and the best way to ensure the component will be implemented properly."
+],
+[
+"li",
+"Iterations are ok. Don’t assume you’ll do everything perfect first time."
+],
+[
+"thanks",
+"Thank you for reading!"
+]
+]

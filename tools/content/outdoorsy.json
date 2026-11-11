@@ -1,0 +1,348 @@
+[
+[
+"li",
+"<a href=\"#slide-out-widget-area\"> Menu </a>"
+],
+[
+"li",
+"<a href=\"/wp-content/uploads/2025/01/Olga-Tochilin-PD.pdf\">Résumé</a>"
+],
+[
+"li",
+"<a href=\"https://www.olgatochilin.com/\">Home</a>"
+],
+[
+"li",
+"<a href=\"https://www.olgatochilin.com/#work\">Work</a>"
+],
+[
+"li",
+"<a href=\"https://www.olgatochilin.com/#experience\">Experience</a>"
+],
+[
+"li",
+"<a href=\"/wp-content/uploads/2025/01/Olga-Tochilin-PD.pdf\">Résumé</a>"
+],
+[
+"h1",
+"Bonfire: Outdoorsy Design System"
+],
+[
+"h6",
+"Client"
+],
+[
+"h6",
+"My role"
+],
+[
+"h2",
+"Overview"
+],
+[
+"p",
+"In this case study, I’ll walk you through my work on the Bonfire Design System for Outdoorsy, highlighting key processes and design decisions."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-featured.png",
+""
+],
+[
+"h2",
+"What is Outdoorsy?"
+],
+[
+"p",
+"Outdoorsy is the largest RV marketplace for renting RVs. It connects local RV motorhomes and camper-van owners with people who want to rent them. Outdoorsy website and mobile app allow guest users to find the perfect RV, book it and hit the road while RV owners can easily create RV listings, accept new bookings and earn cash."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/What-is-outdoorsy-1.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/What-is-outdoorsy-2.png",
+""
+],
+[
+"h2",
+"Problems"
+],
+[
+"p",
+"At Outdoorsy, things move faster than the Flash. With multiple teams and parallel development cycles, it is difficult for designers to be constantly aligned and consistent among the teams."
+],
+[
+"p",
+"Designers used to rely heavily on multiple internal UI kits which were not regularly updated or maintained. As a result, they inherited a lot of design debt and disparity across products and platforms."
+],
+[
+"h4",
+"Multiple and incomplete component libraries"
+],
+[
+"h4",
+"No consistency between Design and Code"
+],
+[
+"h4",
+"Inefficient collaboration without a Design System"
+],
+[
+"h4",
+"Inconsistent UI across products"
+],
+[
+"h4",
+"Messy Code"
+],
+[
+"h4",
+"Compromised Accessibility"
+],
+[
+"h2",
+"Goals"
+],
+[
+"p",
+"The primary objective was to create a comprehensive design system that could effectively resolve several key challenges."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-goals.png",
+""
+],
+[
+"h2",
+"Approach"
+],
+[
+"p",
+"At the beginning of the project, Outdoorsy had two products: Outdoorsy renting products for Guests (Web, iOS, Android) and Outdoorsy admin panel (Web only). Those products had very little in common. They were visually inconsistent and looked like they belonged to different companies."
+],
+[
+"p",
+"I started with the overall architecture of the system. Following (but adjusting) the famous Brad Frost’s Atomic Design methodology."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-architecture.png",
+""
+],
+[
+"h2",
+"Figma Structure"
+],
+[
+"p",
+"From Figma libraries perspective, I came up with the structure."
+],
+[
+"p",
+"The challenge was that each platform (web and native) had its own specific to platform components, even though components can be used across the products."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-figma-structure.png",
+""
+],
+[
+"h2",
+"Design tokens"
+],
+[
+"p",
+"When the architecture was defined, I started building the foundation of the Design System or Design tokens."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-colors.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-typo.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-border-radius.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-icons.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-icons-guide.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-viewports.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-units.png",
+""
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-units-guide.png",
+""
+],
+[
+"h2",
+"Components: Design process"
+],
+[
+"p",
+"When tokens were defined I started building components one by one. Every component requires a lot of collaboration between designers and developers. If I could simplify the design process it would look like this:"
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-process.png",
+""
+],
+[
+"h2",
+"Audit"
+],
+[
+"p",
+"I usually start with auditing the existing design to simply learn the current product:"
+],
+[
+"li",
+"collect a bunch of screenshots across the products to understand the use cases"
+],
+[
+"li",
+"reveal inconsistencies"
+],
+[
+"li",
+"highlight the issues: usability, accessibility, legal, etc."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-audit.png",
+""
+],
+[
+"h2",
+"Research"
+],
+[
+"p",
+"Then I go and look at the other Design systems. I do an external audit:"
+],
+[
+"li",
+"learn about the specific component and its best practices"
+],
+[
+"li",
+"learn how other companies deal with common issues"
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-research.png",
+""
+],
+[
+"h2",
+"Build"
+],
+[
+"p",
+"The next step is to build the component, which is my favorite part. I leverage Figma’s component properties to create a robust, flexible, and, most importantly, easy-to-use component that aligns seamlessly with code implementation."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-build.gif",
+""
+],
+[
+"h2",
+"Validation"
+],
+[
+"p",
+"After a component is built, it needs to be validated. Usually, I apply it to different scenarios and set up a design critique session to get designers’ and developers’ feedback and to make sure I am not missing some edge cases."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-validate.png",
+""
+],
+[
+"h2",
+"Document"
+],
+[
+"p",
+"The next phase is to document all the knowledge. We documented the Outdoorsy design System in Zero Heights. Usually include every detail in the documentation:"
+],
+[
+"li",
+"definition"
+],
+[
+"li",
+"anatomy"
+],
+[
+"li",
+"properties"
+],
+[
+"li",
+"best practices"
+],
+[
+"li",
+"etc"
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-document.png",
+""
+],
+[
+"h2",
+"Present"
+],
+[
+"p",
+"The final step is a presentation. Not everybody has an opportunity to participate in design critique sessions or follow all the changes that the design system team has made. That’s why it’s important to communicate and present the design system to a larger audience: developers, project managers, and designers."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-present.png",
+""
+],
+[
+"h2",
+"Outcomes"
+],
+[
+"p",
+"As a result, 4 Figma libraries were created and set up for future use. These libraries contain 8 design tokens and 15 components that were documented in Zero Heights to be used by designers, developers, and other users."
+],
+[
+"img",
+"https://www.olgatochilin.com/wp-content/uploads/2024/06/bonfire-outcomes.jpg",
+""
+],
+[
+"h1",
+"Thank you for scrolling all the way!"
+]
+]

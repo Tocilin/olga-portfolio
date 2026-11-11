@@ -1,0 +1,223 @@
+[
+[
+"meta",
+{
+"lead": "My attempt to tame complexity in Design Systems",
+"client": "",
+"role": ""
+}
+],
+[
+"h1",
+"Frankenstein’s Input Field"
+],
+[
+"h2",
+"Overview"
+],
+[
+"p",
+"In this case study, I will detail my attempt to create a complex, universal component designed to cover all possible use cases and scenarios."
+],
+[
+"p",
+"I’ll also share my lessons learned in managing complexity within design systems."
+],
+[
+"h2",
+"Introduction"
+],
+[
+"p",
+"I’m passionate about design systems and love experimenting with them. One rainy weekend, I decided to have some fun with an input field component in Figma."
+],
+[
+"p",
+"I wanted to see if I could create a better version of what I call the “perfect universal component.”"
+],
+[
+"p",
+"The goal was to design an input field UI component that functions like a"
+],
+[
+"pull",
+"Swiss army knife"
+],
+[
+"p",
+"adaptable and useful in every possible scenario."
+],
+[
+"img",
+"franky-swiss-army-knife.svg",
+"Introduction"
+],
+[
+"h2",
+"Research"
+],
+[
+"p",
+"My journey started with a deep dive into countless examples of input fields scattered across the internet."
+],
+[
+"p",
+"I meticulously took screenshots and studied over a hundred variations to grasp the wide range and intricacies of input field designs."
+],
+[
+"strip",
+[
+"franky-01.webp",
+"franky-02.webp",
+"franky-03.webp",
+"franky-04.webp",
+"franky-05.webp",
+"franky-06.webp",
+"franky-07.webp",
+"franky-08.webp",
+"franky-09.webp"
+],
+"Research"
+],
+[
+"h2",
+"Analysis"
+],
+[
+"p",
+"I began by noticing patterns in various input field designs, aiming to identify similarities that could form the foundation for a flexible and scalable component. I labeled the most commonly used parts of input fields to ensure they were all included in my universal component."
+],
+[
+"img",
+"franky-franky-analysis-002.svg",
+"Analysis"
+],
+[
+"h2",
+"Defining the Structure"
+],
+[
+"p",
+"Armed with insights from my analysis, I meticulously defined the structure of the input field component."
+],
+[
+"p",
+"By isolating individual elements and creating standalone components, I laid the foundation for future iterations and expansions to accommodate new use cases."
+],
+[
+"img",
+"franky-franky-structure-003.svg",
+"Defining the Structure"
+],
+[
+"h2",
+"Build"
+],
+[
+"p",
+"Next, I dove into my favorite phase – the build phase, leveraging the power of Figma’s Boolean properties and nested structures to construct the versatile input field component. This approach enabled me to avoid the bloating of hundreds of unnecessary variants, ensuring a lean and efficient design."
+],
+[
+"img",
+"franky-franky-build-003.svg",
+"Build"
+],
+[
+"h2",
+"Validation"
+],
+[
+"p",
+"To validate the efficacy of the newly crafted component, I put it to the test against a comprehensive collection of use case examples gathered during my research phase. While I successfully covered the majority of scenarios, some complex edge cases proved too unwieldy to include without sacrificing usability and simplicity."
+],
+[
+"strip",
+[
+"franky-01-1-scaled.webp",
+"franky-02-1-scaled.webp",
+"franky-03-1-scaled.webp",
+"franky-04-1-scaled.webp",
+"franky-05-1-scaled.webp",
+"franky-06-1-scaled.webp",
+"franky-07-1-scaled.webp",
+"franky-08-1-scaled.webp",
+"franky-09-1-scaled.webp"
+],
+"Validation"
+],
+[
+"h2",
+"Usability Test"
+],
+[
+"p",
+"With the component constructed, I enlisted the help of a trusted test participants – my team. Comparing the new “Swiss knife” component to a simpler, existing version, we conducted a series of tasks to assess usability and efficiency."
+],
+[
+"img",
+"franky-franky-usability-test-scaled.webp",
+"Usability Test"
+],
+[
+"h2",
+"Results"
+],
+[
+"p",
+"Surprisingly, despite its sophistication and expanded capabilities, the new component fell short in usability."
+],
+[
+"p",
+"My team completed tasks almost twice as fast with the old, simpler component, citing the overwhelming number of properties and clicks required to navigate the new design."
+],
+[
+"h4",
+"New component performance"
+],
+[
+"stat",
+[
+"47%",
+"Slower ☹️"
+]
+],
+[
+"stat",
+[
+"2x",
+"Click to complete the task"
+]
+],
+[
+"stat",
+[
+"16+",
+"Properties"
+]
+],
+[
+"h2",
+"Closing Thoughts"
+],
+[
+"p",
+"In design systems, simplicity is key. While creating a one-size-fits-all solution sounds appealing, usability must come first."
+],
+[
+"p",
+"That’s why universal design systems often fail: they try to cover too many use cases and aren’t tailored to the specific needs of your company and audience."
+],
+[
+"p",
+"As design system designers, our goal is to create simple, user-friendly components that enhance user experiences and streamline workflows. It’s not about being fancy or covering every possible use case; it’s about being effective and impactful."
+],
+[
+"pull",
+"To avoid a Frankenstein component, keep it simple and user-friendly. Don’t try to cover every possible use case out there."
+],
+[
+"img",
+"franky-franky-closing-thoughts.webp",
+"Closing Thoughts"
+]
+]
