@@ -223,6 +223,9 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
   background:var(--n0);
 }
 .dots{width:70%;max-width:240px;height:auto;color:var(--n900);overflow:visible}
+/* interactive version (site.js): canvas extends past the shape so pushed dots aren't clipped */
+.dots-field{position:relative;aspect-ratio:400/384}
+.dots-field canvas{position:absolute;left:-48px;top:-48px;width:calc(100% + 96px);height:calc(100% + 96px);pointer-events:none}
 .what-card h3{margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.25;font-weight:500;letter-spacing:-.01em;white-space:nowrap}
 .what-desc{margin:8px 0 0;font-size:16px;line-height:1.5;font-weight:330;color:var(--n600)}
 
