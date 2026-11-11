@@ -29,6 +29,19 @@
     if (img.complete) show(true);                     // finished between the check and the listener
   });
 
+  // Back button (case studies): if the visitor came from the homepage, go back there so they
+  // land exactly where they were; otherwise the link goes to the homepage work list.
+  document.querySelectorAll('.brand-back').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      try {
+        var ref = new URL(document.referrer);
+        var fromHome = ref.origin === location.origin && /^\/(index\.html)?$/.test(ref.pathname);
+        if (fromHome && history.length > 1) { e.preventDefault(); history.back(); }
+      } catch (err) { /* no usable referrer: follow the link */ }
+    });
+  });
+
   // Interactive dot field: the dotted shapes on the "What I Do" cards become particles.
   // The cursor repels nearby dots (stronger when closer); springs with damping pull them
   // back home. Positions are read from the original SVG, so shape, size and spacing are

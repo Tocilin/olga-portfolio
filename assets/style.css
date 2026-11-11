@@ -55,6 +55,9 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
   transition:width .5s var(--ease-out),height .5s var(--ease-out);
 }
 .is-stuck .mono{width:40px;height:40px}
+.brand-back .mono svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;transition:transform .3s var(--ease-out)}
+.brand-back:hover .mono svg{transform:translateX(-3px)}
+.brand-back:focus-visible{outline:2px solid var(--n900);outline-offset:4px;border-radius:999px}
 .site-header nav{display:flex;align-items:center;gap:6px;font-size:17px}
 .site-header nav a{white-space:nowrap;text-decoration:none;padding:8px 14px;border-radius:999px;transition:background .2s var(--ease-ui)}
 .site-header nav a:hover{background:var(--n100)}
