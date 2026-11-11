@@ -23,122 +23,122 @@
 </header>
 <main class="project" id="top">
 <article class="wrap narrow">
-  <p class="back" data-reveal><a href="../../#work">← All work</a></p>
-  <h1 data-reveal>PatPat Search Revamp</h1>
-  <dl class="meta" data-reveal><div><dt>Client</dt><dd>PatPat</dd></div><div><dt>My role</dt><dd>Lead Designer</dd></div><div><dt>Team</dt><dd>Product Manager / Researcher / Two iOS engineers / QA specialist</dd></div></dl>
-  <figure data-reveal><img src="../../assets/img/patpat-featured-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Overview</h3>
-<p data-reveal>In this case study, I’ll share my contribution to improving the search experience for the PatPat mobile app as part of the YML team. I worked with PatPat for a year on various iOS projects, but this case focuses on one that was not only designed but also implemented and analyzed.</p>
-<p data-reveal>Typically, in an agency setting, we don’t get to see the results of our work—we deliver and move on. However, this project was different, allowing me to stay long enough to see the impact of our efforts.</p>
-<figure data-reveal><img src="../../assets/img/patpat-overview-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>What is PatPat?</h3>
-<p data-reveal>PatPat is a curated online boutique of fashionable matching outfits for the whole family to bring the crew together in style.</p>
-<figure data-reveal><img src="../../assets/img/patpat-about-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Problem and opportunities</h3>
-<p data-reveal>Our analysis revealed that search performance was falling short. Collaborating with engineers, our product team gathered data to quantify the issues and confirm the need for improvements.</p>
-<div class="stats"><div class="stat" data-reveal><div class="num">62%</div><h3>High Bounce Rate on Mobile</h3><p>Approximately 62% of users exited the app within the first two minutes of use, indicating frustration or difficulty navigating to their desired content.</p></div><div class="stat" data-reveal><div class="num">18%</div><h3>Low Search Usage</h3><p>Only 18% of users engaged with the search functionality, indicating low adoption or usage based on the data available.</p></div><div class="stat" data-reveal><div class="num">46%</div><h3>Search Drop-off</h3><p>Among the users who used the search feature, 46% abandoned the process after viewing the results page, indicating they couldn’t find what they were looking for or didn’t trust the results.</p></div></div>
-<h3 class="h" data-reveal>How might we…</h3>
-<p data-reveal>Improve the search experience of the Mobile App using best practices in usability to make it more intuitive, engaging, and effective, reducing user frustration and improving overall engagement.</p>
-<figure data-reveal><img src="../../assets/img/patpat-opportunity.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h2 class="section-head" data-reveal><span>Research</span><i></i><b>01</b></h2>
-<h3 class="h" data-reveal>User Interviews</h3>
-<p data-reveal>Despite having quantitative data, we needed deeper qualitative insights into search usage. To address this, I collaborated with our researcher, to conduct a series of user interviews.</p>
-<p data-reveal>We recruited participants through the <a href="https://usertesting.com/">usertesting.com</a> platform to gather firsthand feedback and better understand user behavior and pain points.</p>
-<figure data-reveal><img src="../../assets/img/patpat-user-interviews-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>What we learned</h3>
-<h4 class="sub" data-reveal>Low Visibility</h4>
-<p data-reveal>Many users mentioned that the search bar was not prominent enough, leading them to rely on browsing instead. They expected the search bar to be located at the top of the home screen but found it buried among other UI elements.</p>
-<h4 class="sub" data-reveal>No search suggestions</h4>
-<p data-reveal>Users noticed there were no suggestions while typing, which made it harder to find ideas. They expected suggestions, but the search only worked for exact words, making it less helpful.</p>
-<h4 class="sub" data-reveal>Irrelevant Search Results</h4>
-<p data-reveal>A significant number of users reported that the search results didn’t always match their queries. For example, searching for “shoes” might display unrelated products, leading to confusion and dissatisfaction.</p>
-<h4 class="sub" data-reveal>Missed Filters and Sorting Options</h4>
-<p data-reveal>Some users pointed out that they wanted more filters or sorting options directly within the search results (e.g., price range, categories). The lack of these features made the search feel incomplete.</p>
-<h3 class="h" data-reveal>Competitive analysis matrix</h3>
-<p data-reveal>In addition to gathering quantitative and qualitative insights, I conducted a competitive analysis to benchmark search functionality against both direct and indirect competitors.</p>
-<p data-reveal>This analysis helped identify common industry standards and emerging trends in search experiences.</p>
-<p data-reveal>I evaluated key metrics such as search bar visibility, autosuggestions, typo correction, result relevance, filtering and sorting options, the handling of empty search results and more.</p>
-<figure data-reveal><img src="../../assets/img/patpat-competitive-analysis-matrix-1.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>“Desk” research</h3>
-<p data-reveal>Finally, I conducted desk research to gather insights from industry-leading sources without direct user interaction. This involved reviewing best practices, usability guidelines, and research findings from reputable organizations such as Baymard Institute, Nielsen Norman Group (NNG), and Forrester Research.</p>
-<p data-reveal>This research provided a solid foundation for our decisions, helping us align with established UX principles and identify proven strategies to improve the search experience.</p>
-<figure data-reveal><img src="../../assets/img/patpat-desk-research-min.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Product decisions</h3>
-<p data-reveal>After conducting research and gathering feedback, the following product decisions were made.</p>
-<h4 class="sub" data-reveal>Search bar placement and visibility</h4>
-<p data-reveal>Ensure the search bar is easily accessible from key screens and remains visible when scrolling for quick access.</p>
-<h4 class="sub" data-reveal>Display popular and trending searches</h4>
-<p data-reveal>Showcase trending or popular searches to inspire users and encourage exploration.</p>
-<h4 class="sub" data-reveal>Retain recent search queries</h4>
-<p data-reveal>Store and display users’ recent search queries to help them quickly revisit previous searches without retyping.</p>
-<h4 class="sub" data-reveal>Implement effective autosuggestions</h4>
-<p data-reveal>Introduce an autosuggest feature that offers relevant suggestions as users type, helping them find items faster and stay focused on their intent.</p>
-<h4 class="sub" data-reveal>Preserve search queries after submission</h4>
-<p data-reveal>Ensure the original search input remains visible in the search bar after submission. This helps users refine their search without retyping their query from scratch.</p>
-<h4 class="sub" data-reveal>Correct typos automatically</h4>
-<p data-reveal>Integrate typo detection and correction to assist users in finding relevant products even if they enter incorrect search terms.</p>
-<h4 class="sub" data-reveal>Display the number of search results</h4>
-<p data-reveal>Show users the total number of matching results to help them gauge the effort needed to browse through available options.</p>
-<h4 class="sub" data-reveal>Avoid ‘no results’ dead ends</h4>
-<p data-reveal>Instead of blank pages, suggest related items or alternative search queries when no exact matches are found.</p>
-<h4 class="sub" data-reveal>Provide accurate and relevant results</h4>
-<p data-reveal>Search results should prioritize relevance and accuracy to help users find what they need quickly. The most relevant items should appear on the first page.</p>
-<h3 class="h" data-reveal>Out of scope</h3>
-<p data-reveal>Some features were left out of scope due to their complexity and were planned as standalone projects:</p>
-<p data-reveal>Filters and sorting</p>
-<p data-reveal>This feature was too large to fit within the scope of the project and was prioritized for future development.</p>
-<p data-reveal>Android and web apps</p>
-<p data-reveal>The team chose to experiment on iOS first, the most popular platform, before expanding to web and Android if successful.</p>
-<p data-reveal>Search results layout</p>
-<p data-reveal>Since the store focuses solely on clothing, the product team considered layout optimization a lower priority.</p>
-<h2 class="section-head" data-reveal><span>Design</span><i></i><b>02</b></h2>
-<h3 class="h" data-reveal>Search bar placement and visibility</h3>
-<p data-reveal>The search bar has been improved by placing it prominently on key screens and ensuring it remains visible while scrolling. This enhancement makes it easier for users to locate and use the search function without unnecessary effort.</p>
-<figure data-reveal><img src="../../assets/img/patpat-placement.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Trending searches</h3>
-<p data-reveal>Popular search suggestions have been introduced to inspire users and encourage exploration. This enhancement helps users discover trending items and engage with the app even when they don’t have a specific product in mind.</p>
-<figure data-reveal><img src="../../assets/img/patpat-trending.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Recent search queries</h3>
-<p data-reveal>Recent search queries have been introduced to help users quickly revisit previous searches without retyping. This improvement enhances convenience and encourages repeated engagement with the search feature.</p>
-<figure data-reveal><img src="../../assets/img/patpat-recent-3.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Autosuggestions</h3>
-<p data-reveal>An autosuggest feature has been implemented to provide relevant suggestions as users type, helping them find items faster and stay focused on their intent.</p>
-<figure data-reveal><img src="../../assets/img/patpat-autosuggestions.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Preserve search queries after submission</h3>
-<p data-reveal>The search input now remains visible in the search bar after submission, allowing users to refine their search without needing to retype their query from scratch.</p>
-<figure data-reveal><img src="../../assets/img/patpat-preserve-search.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Display the number of search results</h3>
-<p data-reveal>The total number of matching results is now displayed, helping users gauge the effort needed to browse through available options and make informed decisions.</p>
-<figure data-reveal><img src="../../assets/img/patpat-number-results.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Spell Correction</h3>
-<p data-reveal>Typo detection and correction have been implemented to help users find relevant products even if they enter incorrect search terms, ensuring a smoother search experience.</p>
-<figure data-reveal><img src="../../assets/img/patpat-spell-correction.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Improved ‘no results’ page</h3>
-<p data-reveal>The ‘no results’ page has been enhanced with an “Other options to consider” section, featuring flash sales, new arrivals, and trending items. This update helps users explore relevant products even when their initial search doesn’t yield exact matches.</p>
-<figure data-reveal><img src="../../assets/img/patpat-no-results.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h3 class="h" data-reveal>Accurate and relevant results</h3>
-<p data-reveal>Search relevancy has been significantly improved by refining the ranking algorithm to consider multiple parameters, each with a different weight, ensuring users find what they need quickly.</p>
-<p data-reveal>The most relevant items are now prioritized and appear first, enhancing the overall shopping experience.</p>
-<p data-reveal>For example, if a user searches for “black jeans,” search results are ranked based on:</p>
-<ul data-reveal><li>Exact match – Items with “black jeans” in the title rank highest.</li><li>Popularity – Frequently bought jeans appear at the top.</li><li>Ratings – Higher-rated products rank above lower-rated ones.</li><li>Availability – In-stock items show before limited or out-of-stock options.</li><li>etc.</li></ul>
-<figure data-reveal><img src="../../assets/img/patpat-relevant-results.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
-<h2 class="section-head" data-reveal><span>Results</span><i></i><b>03</b></h2>
-<div class="stats"><div class="stat" data-reveal><div class="num">38%</div><h3>Increased user retention on mobile</h3><p>Following the search experience improvements, only 38% of users exited the app within the first two minutes, indicating a significant reduction in frustration and improved content discoverability.</p></div><div class="stat" data-reveal><div class="num">52%</div><h3>Higher search engagement</h3><p>Search usage increased to 52%, showing that users found the feature more accessible and intuitive, leading to greater adoption and interaction.</p></div><div class="stat" data-reveal><div class="num">24%</div><h3>Reduced search drop-off</h3><p>Search drop-off decreased to 24%, demonstrating improved trust in the search results and a better alignment with user expectations.</p></div></div>
-<h3 class="h" data-reveal>Key takeaways</h3>
-<p data-reveal>This project reinforced the importance of a user-centered, data-driven approach to improving search functionality. By combining qualitative feedback with quantitative data, collaborating across teams, and benchmarking industry best practices, we successfully enhanced the search experience and drove meaningful improvements.</p>
-<ul data-reveal><li>Collaboration is key: Close teamwork between design, product, and engineering ensured feasible and impactful solutions.</li><li>Balancing scope and priorities: Some features were deferred for future implementation, highlighting the need to focus on high-impact improvements first.</li><li>Data-driven design works: Using research insights to guide decisions led to measurable improvements in user engagement and satisfaction.</li></ul>
-<p class="thanks" data-reveal>Thank you for scrolling all the way!</p>
+  <p class="back"><a href="../../#work">← All work</a></p>
+  <h1>PatPat Search Revamp</h1>
+  <dl class="meta"><div><dt>Client</dt><dd>PatPat</dd></div><div><dt>My role</dt><dd>Lead Designer</dd></div><div><dt>Team</dt><dd>Product Manager / Researcher / Two iOS engineers / QA specialist</dd></div></dl>
+  <figure><img src="../../assets/img/patpat-featured-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Overview</h3>
+<p>In this case study, I’ll share my contribution to improving the search experience for the PatPat mobile app as part of the YML team. I worked with PatPat for a year on various iOS projects, but this case focuses on one that was not only designed but also implemented and analyzed.</p>
+<p>Typically, in an agency setting, we don’t get to see the results of our work—we deliver and move on. However, this project was different, allowing me to stay long enough to see the impact of our efforts.</p>
+<figure><img src="../../assets/img/patpat-overview-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">What is PatPat?</h3>
+<p>PatPat is a curated online boutique of fashionable matching outfits for the whole family to bring the crew together in style.</p>
+<figure><img src="../../assets/img/patpat-about-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Problem and opportunities</h3>
+<p>Our analysis revealed that search performance was falling short. Collaborating with engineers, our product team gathered data to quantify the issues and confirm the need for improvements.</p>
+<div class="stats"><div class="stat"><div class="num">62%</div><h3>High Bounce Rate on Mobile</h3><p>Approximately 62% of users exited the app within the first two minutes of use, indicating frustration or difficulty navigating to their desired content.</p></div><div class="stat"><div class="num">18%</div><h3>Low Search Usage</h3><p>Only 18% of users engaged with the search functionality, indicating low adoption or usage based on the data available.</p></div><div class="stat"><div class="num">46%</div><h3>Search Drop-off</h3><p>Among the users who used the search feature, 46% abandoned the process after viewing the results page, indicating they couldn’t find what they were looking for or didn’t trust the results.</p></div></div>
+<h3 class="h">How might we…</h3>
+<p>Improve the search experience of the Mobile App using best practices in usability to make it more intuitive, engaging, and effective, reducing user frustration and improving overall engagement.</p>
+<figure><img src="../../assets/img/patpat-opportunity.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h2 class="section-head"><span>Research</span><i></i><b>01</b></h2>
+<h3 class="h">User Interviews</h3>
+<p>Despite having quantitative data, we needed deeper qualitative insights into search usage. To address this, I collaborated with our researcher, to conduct a series of user interviews.</p>
+<p>We recruited participants through the <a href="https://usertesting.com/">usertesting.com</a> platform to gather firsthand feedback and better understand user behavior and pain points.</p>
+<figure><img src="../../assets/img/patpat-user-interviews-2.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">What we learned</h3>
+<h4 class="sub">Low Visibility</h4>
+<p>Many users mentioned that the search bar was not prominent enough, leading them to rely on browsing instead. They expected the search bar to be located at the top of the home screen but found it buried among other UI elements.</p>
+<h4 class="sub">No search suggestions</h4>
+<p>Users noticed there were no suggestions while typing, which made it harder to find ideas. They expected suggestions, but the search only worked for exact words, making it less helpful.</p>
+<h4 class="sub">Irrelevant Search Results</h4>
+<p>A significant number of users reported that the search results didn’t always match their queries. For example, searching for “shoes” might display unrelated products, leading to confusion and dissatisfaction.</p>
+<h4 class="sub">Missed Filters and Sorting Options</h4>
+<p>Some users pointed out that they wanted more filters or sorting options directly within the search results (e.g., price range, categories). The lack of these features made the search feel incomplete.</p>
+<h3 class="h">Competitive analysis matrix</h3>
+<p>In addition to gathering quantitative and qualitative insights, I conducted a competitive analysis to benchmark search functionality against both direct and indirect competitors.</p>
+<p>This analysis helped identify common industry standards and emerging trends in search experiences.</p>
+<p>I evaluated key metrics such as search bar visibility, autosuggestions, typo correction, result relevance, filtering and sorting options, the handling of empty search results and more.</p>
+<figure><img src="../../assets/img/patpat-competitive-analysis-matrix-1.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">“Desk” research</h3>
+<p>Finally, I conducted desk research to gather insights from industry-leading sources without direct user interaction. This involved reviewing best practices, usability guidelines, and research findings from reputable organizations such as Baymard Institute, Nielsen Norman Group (NNG), and Forrester Research.</p>
+<p>This research provided a solid foundation for our decisions, helping us align with established UX principles and identify proven strategies to improve the search experience.</p>
+<figure><img src="../../assets/img/patpat-desk-research-min.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Product decisions</h3>
+<p>After conducting research and gathering feedback, the following product decisions were made.</p>
+<h4 class="sub">Search bar placement and visibility</h4>
+<p>Ensure the search bar is easily accessible from key screens and remains visible when scrolling for quick access.</p>
+<h4 class="sub">Display popular and trending searches</h4>
+<p>Showcase trending or popular searches to inspire users and encourage exploration.</p>
+<h4 class="sub">Retain recent search queries</h4>
+<p>Store and display users’ recent search queries to help them quickly revisit previous searches without retyping.</p>
+<h4 class="sub">Implement effective autosuggestions</h4>
+<p>Introduce an autosuggest feature that offers relevant suggestions as users type, helping them find items faster and stay focused on their intent.</p>
+<h4 class="sub">Preserve search queries after submission</h4>
+<p>Ensure the original search input remains visible in the search bar after submission. This helps users refine their search without retyping their query from scratch.</p>
+<h4 class="sub">Correct typos automatically</h4>
+<p>Integrate typo detection and correction to assist users in finding relevant products even if they enter incorrect search terms.</p>
+<h4 class="sub">Display the number of search results</h4>
+<p>Show users the total number of matching results to help them gauge the effort needed to browse through available options.</p>
+<h4 class="sub">Avoid ‘no results’ dead ends</h4>
+<p>Instead of blank pages, suggest related items or alternative search queries when no exact matches are found.</p>
+<h4 class="sub">Provide accurate and relevant results</h4>
+<p>Search results should prioritize relevance and accuracy to help users find what they need quickly. The most relevant items should appear on the first page.</p>
+<h3 class="h">Out of scope</h3>
+<p>Some features were left out of scope due to their complexity and were planned as standalone projects:</p>
+<p>Filters and sorting</p>
+<p>This feature was too large to fit within the scope of the project and was prioritized for future development.</p>
+<p>Android and web apps</p>
+<p>The team chose to experiment on iOS first, the most popular platform, before expanding to web and Android if successful.</p>
+<p>Search results layout</p>
+<p>Since the store focuses solely on clothing, the product team considered layout optimization a lower priority.</p>
+<h2 class="section-head"><span>Design</span><i></i><b>02</b></h2>
+<h3 class="h">Search bar placement and visibility</h3>
+<p>The search bar has been improved by placing it prominently on key screens and ensuring it remains visible while scrolling. This enhancement makes it easier for users to locate and use the search function without unnecessary effort.</p>
+<figure><img src="../../assets/img/patpat-placement.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Trending searches</h3>
+<p>Popular search suggestions have been introduced to inspire users and encourage exploration. This enhancement helps users discover trending items and engage with the app even when they don’t have a specific product in mind.</p>
+<figure><img src="../../assets/img/patpat-trending.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Recent search queries</h3>
+<p>Recent search queries have been introduced to help users quickly revisit previous searches without retyping. This improvement enhances convenience and encourages repeated engagement with the search feature.</p>
+<figure><img src="../../assets/img/patpat-recent-3.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Autosuggestions</h3>
+<p>An autosuggest feature has been implemented to provide relevant suggestions as users type, helping them find items faster and stay focused on their intent.</p>
+<figure><img src="../../assets/img/patpat-autosuggestions.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Preserve search queries after submission</h3>
+<p>The search input now remains visible in the search bar after submission, allowing users to refine their search without needing to retype their query from scratch.</p>
+<figure><img src="../../assets/img/patpat-preserve-search.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Display the number of search results</h3>
+<p>The total number of matching results is now displayed, helping users gauge the effort needed to browse through available options and make informed decisions.</p>
+<figure><img src="../../assets/img/patpat-number-results.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Spell Correction</h3>
+<p>Typo detection and correction have been implemented to help users find relevant products even if they enter incorrect search terms, ensuring a smoother search experience.</p>
+<figure><img src="../../assets/img/patpat-spell-correction.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Improved ‘no results’ page</h3>
+<p>The ‘no results’ page has been enhanced with an “Other options to consider” section, featuring flash sales, new arrivals, and trending items. This update helps users explore relevant products even when their initial search doesn’t yield exact matches.</p>
+<figure><img src="../../assets/img/patpat-no-results.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h3 class="h">Accurate and relevant results</h3>
+<p>Search relevancy has been significantly improved by refining the ranking algorithm to consider multiple parameters, each with a different weight, ensuring users find what they need quickly.</p>
+<p>The most relevant items are now prioritized and appear first, enhancing the overall shopping experience.</p>
+<p>For example, if a user searches for “black jeans,” search results are ranked based on:</p>
+<ul><li>Exact match – Items with “black jeans” in the title rank highest.</li><li>Popularity – Frequently bought jeans appear at the top.</li><li>Ratings – Higher-rated products rank above lower-rated ones.</li><li>Availability – In-stock items show before limited or out-of-stock options.</li><li>etc.</li></ul>
+<figure><img src="../../assets/img/patpat-relevant-results.webp" alt="PatPat Search Revamp – illustration" loading="lazy"></figure>
+<h2 class="section-head"><span>Results</span><i></i><b>03</b></h2>
+<div class="stats"><div class="stat"><div class="num">38%</div><h3>Increased user retention on mobile</h3><p>Following the search experience improvements, only 38% of users exited the app within the first two minutes, indicating a significant reduction in frustration and improved content discoverability.</p></div><div class="stat"><div class="num">52%</div><h3>Higher search engagement</h3><p>Search usage increased to 52%, showing that users found the feature more accessible and intuitive, leading to greater adoption and interaction.</p></div><div class="stat"><div class="num">24%</div><h3>Reduced search drop-off</h3><p>Search drop-off decreased to 24%, demonstrating improved trust in the search results and a better alignment with user expectations.</p></div></div>
+<h3 class="h">Key takeaways</h3>
+<p>This project reinforced the importance of a user-centered, data-driven approach to improving search functionality. By combining qualitative feedback with quantitative data, collaborating across teams, and benchmarking industry best practices, we successfully enhanced the search experience and drove meaningful improvements.</p>
+<ul><li>Collaboration is key: Close teamwork between design, product, and engineering ensured feasible and impactful solutions.</li><li>Balancing scope and priorities: Some features were deferred for future implementation, highlighting the need to focus on high-impact improvements first.</li><li>Data-driven design works: Using research insights to guide decisions led to measurable improvements in user engagement and satisfaction.</li></ul>
+<p class="thanks">Thank you for scrolling all the way!</p>
 </article>
 <section class="wrap">
-  <h2 class="section-head" data-reveal><span>More work</span><i></i></h2>
+  <h2 class="section-head"><span>More work</span><i></i></h2>
   <div class="grid">
-<a class="card" href="../../portfolio/midland/" data-reveal>
+<a class="card" href="../../portfolio/midland/">
   <span class="card-text">
     <span class="card-title">Midland State Bank Color System Overhaul</span>
   </span>
   <span class="card-media"><img src="../../assets/img/midland-featured-5.webp" alt="" width="1200" height="509" loading="lazy"></span>
 </a>
-<a class="card" href="../../portfolio/lucid/" data-reveal>
+<a class="card" href="../../portfolio/lucid/">
   <span class="card-text">
     <span class="card-title">Lucid Motors</span>
   </span>

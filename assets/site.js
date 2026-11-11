@@ -7,27 +7,27 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // Reveal-on-scroll
-  var els = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        // small stagger for siblings that enter together
-        var delay = (en.target.dataset.i || 0) * 70;
-        en.target.style.transitionDelay = delay + 'ms';
-        en.target.classList.add('in');
-        io.unobserve(en.target);
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    els.forEach(function (el) {
-      var sibs = el.parentElement.querySelectorAll(':scope > [data-reveal]');
-      el.dataset.i = Math.min(Array.prototype.indexOf.call(sibs, el), 4);
-      io.observe(el);
-    });
-  } else {
-    els.forEach(function (el) { el.classList.add('in'); });
-  }
+  // Images fade in only if they actually had to load. Already-loaded images, and ones that
+  // come straight from the browser cache, simply appear. Text and cards never fade.
+  document.querySelectorAll('.card-media img, .project figure img').forEach(function (img) {
+    if (img.complete) return;                         // already loaded: leave it alone
+    img.classList.add('img-pending');
+    function show(instant) {
+      if (instant) img.style.transition = 'none';
+      img.classList.remove('img-pending');
+      if (instant) { void img.offsetWidth; img.style.transition = ''; }
+    }
+    function fromCache() {                            // cached or near-instant: no need to fade
+      try {
+        var e = performance.getEntriesByName(img.currentSrc || img.src);
+        e = e[e.length - 1];
+        return !!e && (e.transferSize === 0 || e.duration < 80);
+      } catch (err) { return false; }
+    }
+    img.addEventListener('load', function () { show(fromCache()); }, { once: true });
+    img.addEventListener('error', function () { show(true); }, { once: true });
+    if (img.complete) show(true);                     // finished between the check and the listener
+  });
 
   // Interactive dot field: the dotted shapes on the "What I Do" cards become particles.
   // The cursor repels nearby dots (stronger when closer); springs with damping pull them
