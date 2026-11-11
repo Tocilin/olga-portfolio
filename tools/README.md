@@ -23,6 +23,7 @@ generated HTML by hand: the next build overwrites it. Change the generator or th
 | Homepage / "More work" captions (title + company) | `WORK_CAPTION` |
 | A case study's text and images | `tools/content/<slug>.json` |
 | How a content type looks (cards, strips, stats…) | `render_blocks()` + `assets/style.css` |
+| Favicon (OT in a dark circle) | `assets/favicon.svg` (source), `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `favicon.ico` at the repo root; linked from `page()` |
 | Site-wide look, motion | `assets/style.css`, `assets/site.js` (edited directly, not generated) |
 
 Then run the build, check the result locally (`python3 -m http.server 8080`, desktop and ~390px
