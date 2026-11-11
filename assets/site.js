@@ -9,7 +9,7 @@
 
   // Images fade in only if they actually had to load. Already-loaded images, and ones that
   // come straight from the browser cache, simply appear. Text and cards never fade.
-  document.querySelectorAll('.card-media img, .work-img img, .project figure img').forEach(function (img) {
+  document.querySelectorAll('.work-img img, .project figure img').forEach(function (img) {
     if (img.complete) return;                         // already loaded: leave it alone
     img.classList.add('img-pending');
     function show(instant) {
