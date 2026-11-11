@@ -179,6 +179,17 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
 .stat p{font-size:16px!important;color:var(--n600);margin:0!important;line-height:1.5!important}
 @media (max-width:1000px){.stats{margin-inline:0}}
 .thanks{text-align:center;color:var(--n600);margin:96px 0 0!important}
+
+/* case study extras: subtitle, pull lines, screenshot strips, small drawings */
+.project strong{font-weight:600}
+.project .lead{margin:-8px 0 32px;max-width:34em;font-size:clamp(19px,2.2vw,23px);line-height:1.45;color:var(--n600)}
+.project .pull{margin:28px 0;font-size:clamp(26px,3.4vw,34px);line-height:1.2;font-weight:500;letter-spacing:-.02em;color:var(--n900)}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x proximity;margin:40px calc(-1 * min(12vw,170px));padding:0 0 14px;scrollbar-width:thin;outline-offset:4px;-webkit-overflow-scrolling:touch}
+.project .strip figure{margin:0;flex:none;scroll-snap-align:start}
+.project .strip img{height:clamp(360px,46vw,560px);width:auto;max-width:none;border-radius:16px}
+@media (max-width:1000px){.strip{margin-inline:calc(-1 * var(--edge));padding-inline:var(--edge);scroll-padding-inline:var(--edge)}}
+.project figure.figure-small{margin:32px 0}
+.project figure.figure-small img{width:auto;max-width:100%;border:0;border-radius:0;background:none}
 .project .wrap:last-of-type{padding-top:40px}
 
 /* ---------- footer ---------- */

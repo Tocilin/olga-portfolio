@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frankenstein’s Input Field — Olga Tochilin</title>
+<meta name="description" content="My attempt to tame complexity in Design Systems">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preload" href="../../assets/fonts/HostGrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../../"><span class="mono">OT</span><span class="brand-name">Olga Tochilin</span></a>
+    <nav>
+      <a href="../../#work">Work</a>
+      <a href="../../#experience">Experience</a>
+      <a class="nav-cta" href="../../assets/Olga-Tochilin-PD.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg>Résumé</a>
+      <a class="nav-cta" href="https://www.linkedin.com/in/olgatoc/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+    </nav>
+  </div>
+</header>
+<main class="project" id="top">
+<article class="wrap narrow">
+  <p class="back"><a href="../../#work">← All work</a></p>
+  <h1>Frankenstein’s Input Field</h1>
+  <p class="lead">My attempt to tame complexity in Design Systems</p>
+  <h3 class="h">Overview</h3>
+<p>In this case study, I will detail my attempt to create a complex, universal component designed to cover all possible use cases and scenarios.</p>
+<p>I’ll also share my lessons learned in managing complexity within design systems.</p>
+<h3 class="h">Introduction</h3>
+<p>I’m passionate about design systems and love experimenting with them. One rainy weekend, I decided to have some fun with an input field component in Figma.</p>
+<p>I wanted to see if I could create a better version of what I call the “perfect universal component.”</p>
+<p>The goal was to design an input field UI component that functions like a</p>
+<p class="pull">Swiss army knife</p>
+<p>adaptable and useful in every possible scenario.</p>
+<figure class="figure-small" style="max-width:248px"><img src="../../assets/img/franky-swiss-army-knife.svg" alt="Introduction" width="248" height="249" loading="lazy"></figure>
+<h3 class="h">Research</h3>
+<p>My journey started with a deep dive into countless examples of input fields scattered across the internet.</p>
+<p>I meticulously took screenshots and studied over a hundred variations to grasp the wide range and intricacies of input field designs.</p>
+<div class="strip" tabindex="0" role="group" aria-label="Research – screenshots, scroll sideways"><figure><img src="../../assets/img/franky-01.webp" alt="Research – screenshot 1" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-02.webp" alt="Research – screenshot 2" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-03.webp" alt="Research – screenshot 3" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-04.webp" alt="Research – screenshot 4" width="1179" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-05.webp" alt="Research – screenshot 5" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-06.webp" alt="Research – screenshot 6" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-07.webp" alt="Research – screenshot 7" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-08.webp" alt="Research – screenshot 8" width="1125" height="2556" loading="lazy"></figure><figure><img src="../../assets/img/franky-09.webp" alt="Research – screenshot 9" width="1125" height="2556" loading="lazy"></figure></div>
+<h3 class="h">Analysis</h3>
+<p>I began by noticing patterns in various input field designs, aiming to identify similarities that could form the foundation for a flexible and scalable component. I labeled the most commonly used parts of input fields to ensure they were all included in my universal component.</p>
+<figure><img src="../../assets/img/franky-franky-analysis-002.svg" alt="Analysis" width="624" height="320" loading="lazy"></figure>
+<h3 class="h">Defining the Structure</h3>
+<p>Armed with insights from my analysis, I meticulously defined the structure of the input field component.</p>
+<p>By isolating individual elements and creating standalone components, I laid the foundation for future iterations and expansions to accommodate new use cases.</p>
+<figure><img src="../../assets/img/franky-franky-structure-003.svg" alt="Defining the Structure" width="1475" height="934" loading="lazy"></figure>
+<h3 class="h">Build</h3>
+<p>Next, I dove into my favorite phase – the build phase, leveraging the power of Figma’s Boolean properties and nested structures to construct the versatile input field component. This approach enabled me to avoid the bloating of hundreds of unnecessary variants, ensuring a lean and efficient design.</p>
+<figure><img src="../../assets/img/franky-franky-build-003.svg" alt="Build" width="1678" height="1243" loading="lazy"></figure>
+<h3 class="h">Validation</h3>
+<p>To validate the efficacy of the newly crafted component, I put it to the test against a comprehensive collection of use case examples gathered during my research phase. While I successfully covered the majority of scenarios, some complex edge cases proved too unwieldy to include without sacrificing usability and simplicity.</p>
+<div class="strip" tabindex="0" role="group" aria-label="Validation – screenshots, scroll sideways"><figure><img src="../../assets/img/franky-01-1-scaled.webp" alt="Validation – screenshot 1" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-02-1-scaled.webp" alt="Validation – screenshot 2" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-03-1-scaled.webp" alt="Validation – screenshot 3" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-04-1-scaled.webp" alt="Validation – screenshot 4" width="1181" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-05-1-scaled.webp" alt="Validation – screenshot 5" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-06-1-scaled.webp" alt="Validation – screenshot 6" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-07-1-scaled.webp" alt="Validation – screenshot 7" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-08-1-scaled.webp" alt="Validation – screenshot 8" width="1127" height="2560" loading="lazy"></figure><figure><img src="../../assets/img/franky-09-1-scaled.webp" alt="Validation – screenshot 9" width="1127" height="2560" loading="lazy"></figure></div>
+<h3 class="h">Usability Test</h3>
+<p>With the component constructed, I enlisted the help of a trusted test participants – my team. Comparing the new “Swiss knife” component to a simpler, existing version, we conducted a series of tasks to assess usability and efficiency.</p>
+<figure><img src="../../assets/img/franky-franky-usability-test-scaled.webp" alt="Usability Test" width="2000" height="971" loading="lazy"></figure>
+<h3 class="h">Results</h3>
+<p>Surprisingly, despite its sophistication and expanded capabilities, the new component fell short in usability.</p>
+<p>My team completed tasks almost twice as fast with the old, simpler component, citing the overwhelming number of properties and clicks required to navigate the new design.</p>
+<h4 class="sub">New component performance</h4>
+<div class="stats"><div class="stat"><div class="num">47%</div><h3>Slower ☹️</h3></div><div class="stat"><div class="num">2x</div><h3>Click to complete the task</h3></div><div class="stat"><div class="num">16+</div><h3>Properties</h3></div></div>
+<h3 class="h">Closing Thoughts</h3>
+<p>In design systems, simplicity is key. While creating a one-size-fits-all solution sounds appealing, usability must come first.</p>
+<p>That’s why universal design systems often fail: they try to cover too many use cases and aren’t tailored to the specific needs of your company and audience.</p>
+<p>As design system designers, our goal is to create simple, user-friendly components that enhance user experiences and streamline workflows. It’s not about being fancy or covering every possible use case; it’s about being effective and impactful.</p>
+<p class="pull">To avoid a Frankenstein component, keep it simple and user-friendly. Don’t try to cover every possible use case out there.</p>
+<figure class="figure-small" style="max-width:308px"><img src="../../assets/img/franky-franky-closing-thoughts.webp" alt="Closing Thoughts" width="308" height="309" loading="lazy"></figure>
+</article>
+<section class="wrap">
+  <h2 class="section-head"><span>More work</span><i></i></h2>
+  <div class="work-grid work-grid-pair">
+<a class="work-item" href="../../portfolio/patpat/">
+  <span class="work-img"><img src="../../assets/img/patpat-featured-5.webp" alt="" width="1200" height="509" loading="lazy"></span>
+  <span class="work-cap"><span class="work-title">Search Revamp</span><span class="work-sub">PatPat</span></span>
+</a>
+<a class="work-item" href="../../portfolio/midland/">
+  <span class="work-img"><img src="../../assets/img/midland-featured-5.webp" alt="" width="1200" height="509" loading="lazy"></span>
+  <span class="work-cap"><span class="work-title">Semantic color system</span><span class="work-sub">Midland State Bank</span></span>
+</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><span>© Olga Tochilin · 2026</span><a href="#top" class="to-top">Back to top ↑</a></footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

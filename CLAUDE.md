@@ -22,7 +22,9 @@ nothing else to click.
 
 - `index.html` — home page
 - `portfolio/<project>/index.html` — case studies (patpat, midland, lucid,
-  outdoorsy, jpmorgan-chase)
+  outdoorsy, jpmorgan-chase, franky, mayo). `franky` and `mayo` were moved over
+  from olgadesignsystems.com; their cover tiles are `assets/img/franky-featured.webp`
+  and `assets/img/mayo-featured.webp`.
 - `assets/` — `style.css`, `site.js`, `fonts/`, `img/`, and the résumé PDF
 
 The header and footer markup is duplicated in every page, so a change to the
