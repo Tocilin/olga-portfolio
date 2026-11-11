@@ -161,8 +161,10 @@ svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;st
 .project ul{padding-left:1.2em;margin:0 0 22px;font-size:19px}
 .project li{margin-bottom:8px}
 .project figure{margin:40px calc(-1 * min(12vw,170px))}
+.figure-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px);margin:40px calc(-1 * min(12vw,170px))}
+.figure-row figure{margin:0}
 .project figure img{width:100%;border:var(--hair);border-radius:var(--radius);background:var(--n100)}
-@media (max-width:1000px){.project figure{margin-inline:0}}
+@media (max-width:1000px){.project figure,.figure-row{margin-inline:0}.figure-row figure{margin:0}}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:32px 0}
 .stat{padding:28px 24px;border:var(--hair);border-radius:var(--radius)}
 .stat .num{font-size:56px;font-weight:600;letter-spacing:-.04em;line-height:1}
