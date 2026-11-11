@@ -8,7 +8,6 @@ HERE=os.path.dirname(os.path.abspath(__file__))
 S=HERE+'/content/'                       # case-study content (one JSON file per project)
 R=os.path.dirname(HERE)+'/'              # repository root: pages are written here
 NAME='Olga Tochilin'
-PDF='Olga-Tochilin-PD.pdf'
 # order as on the original homepage
 PROJECTS=[
  dict(slug='patpat',src='patpat',title='PatPat Search Revamp',cat='Mobile App',client='PatPat',role='Lead Designer',team='Product Manager / Researcher / Two iOS engineers / QA specialist',thumb='patpat-featured-5.webp'),
@@ -28,7 +27,6 @@ ICON={
  'layers':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg>',
  'pen':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></svg>',
  'ext':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>',
- 'doc':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg>',
 }
 
 PROBLEMS=[
@@ -71,6 +69,7 @@ def page(title,body,depth,desc='',back=False):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <script>document.documentElement.classList.add('js')</script>
@@ -84,7 +83,6 @@ def page(title,body,depth,desc='',back=False):
     <nav>
       <a href="{up}#work">Work</a>
       <a href="{up}#experience">Experience</a>
-      <a class="nav-cta" href="{up}assets/{PDF}" target="_blank" rel="noopener">{ICON['doc']}Résumé</a>
       <a class="nav-cta" href="https://www.linkedin.com/in/olgatoc/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>{ICON['ext']}<span class="sr-only"> (opens in a new tab)</span></a>
     </nav>
   </div>
@@ -216,7 +214,6 @@ home=f"""<main id="top">
 <section class="hero">
   <h1>A designer focused on user experience and visual design with a passion for design&nbsp;systems.</h1>
   <div class="hero-cta">
-    <a class="btn btn-solid" href="assets/{PDF}" target="_blank" rel="noopener"><span>Download résumé</span></a>
     <a class="link-ext" href="https://www.linkedin.com/in/olgatoc/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>{ICON['ext']}<span class="sr-only"> (opens in a new tab)</span></a>
   </div>
 </section>

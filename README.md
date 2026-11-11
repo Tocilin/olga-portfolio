@@ -4,7 +4,7 @@ A simple static portfolio site (plain HTML, CSS and a little JavaScript — no b
 
 - `index.html` — home page
 - `portfolio/<project>/index.html` — case studies
-- `assets/` — styles, scripts, fonts, images and the résumé PDF
+- `assets/` — styles, scripts, fonts, and images
 
 ## Preview locally
 

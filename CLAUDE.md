@@ -31,11 +31,19 @@ nothing else to click.
   outdoorsy, jpmorgan-chase, franky, mayo). `franky` and `mayo` were moved over
   from olgadesignsystems.com; their cover tiles are `assets/img/franky-featured.webp`
   and `assets/img/mayo-featured.webp`.
-- `assets/` — `style.css`, `site.js`, `fonts/`, `img/`, and the résumé PDF
+- `assets/` — `style.css`, `site.js`, `fonts/`, and `img/`
 - `tools/` — the page generator, case-study content and notes (kept out of the public deploy via `.vercelignore`)
 
 The header and footer live in `page()` in `tools/build.py` and are written into every page by the
 build, so one edit there updates all pages.
+
+## Search engines: do not index (owner's decision)
+
+The owner does not want the site listed by Google. Every page carries
+`<meta name="robots" content="noindex, nofollow">` (from `page()` in `tools/build.py`) and
+`vercel.json` sends `X-Robots-Tag: noindex, nofollow` for every file, including images.
+Keep both. Do not add a `robots.txt` that disallows crawling: crawlers must be able to read the
+noindex signal. Remove both only if the owner asks to be listed.
 
 ## Hosting
 
